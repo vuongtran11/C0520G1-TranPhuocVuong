@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InTamGiac</title>
+</head>
+<body>
+<script>
+
+    let sout0="<table>";
+    for(let i=1;i<=5;i++){
+        sout0=sout0 +"<tr>";
+        for(let j=1;j<=i;j++){
+            sout0=sout0+"<td>"+'*'+"</td>";
+        }
+        sout0+="</tr>";
+    }
+    sout0+="</table>";
+    document.write(sout0);
+
+    let sout1="<table>";
+    for(let i=5;i>=1;i--){
+        sout1=sout1 +"<tr>";
+        for(let j=i;j>=1;j--){
+            sout1=sout1+"<td>"+'*'+"</td>";
+        }
+        sout1+="</tr>";
+    }
+    sout1+="</table>";
+    document.write(sout1);
+
+
+    let sout2="<table>";
+    for(let i=1;i<=5;i++){
+        sout2=sout2 +"<tr>";
+        for(let j=1;j<=5;j++){
+            if(j>5-i){
+                sout2=sout2+"<td>"+'*'+"</td>";
+            } else {
+                sout2+= "<td>"+""+"</td>";
+            }
+        }
+        sout2+="</tr>";
+    }
+    sout2+="</table>";
+    document.write(sout2);
+
+
+
+    let sout="<table>";
+    for(let i=1;i<=5;i++){
+        sout=sout +"<tr>";
+        for(let j=1;j<=5;j++){
+            if(j>=i){
+                sout=sout+"<td>"+'*'+"</td>";
+            } else {
+                sout+= "<td>"+""+"</td>";
+            }
+        }
+        sout+="</tr>";
+    }
+    sout+="</table>";
+    document.write(sout);
+
+
+
+</script>
+
+</body>
+</html>

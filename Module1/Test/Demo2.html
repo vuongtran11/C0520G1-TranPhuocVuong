@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="month">
+<button type="button" onclick="months()">Tinh so ngay</button>
+<p id="show"></p>
+<script>
+    function months() {
+    let a = parseInt(document.getElementById('month').value);
+    switch (a) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+            document.getElementById('show').innerHTML='30 ngay';
+
+    }
+    }
+</script>
+</body>
+</html>

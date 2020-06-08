@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoNguyenTo</title>
+</head>
+<body>
+<script>
+
+    let number = parseInt(prompt("Nhập số lượng số NT cần tìm: "));
+    let count =0;
+    let N=2;
+    let i;
+    let text="";
+    while (count<number){
+        for(i=2;i<N;i++){
+            if(N%i==0)
+                break;
+        }
+        if(i==N){
+            text = text + N +" ";
+            count++;
+        }
+        N++;
+    }
+    document.write(number+" số nguyên tố cần tìm là: ");
+    document.write(text);
+
+</script>
+</body>
+</html>

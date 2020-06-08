@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC2.Task1-2</title>
+</head>
+<body>
+<script>
+    let name= "Vuong";
+    let cmnd= "123";
+    let birthday="11/05/2020";
+    let email="abc@mail.com";
+    let address="Da Nang";
+    let typeService="Villa";
+    let typeRoom="Vip";
+    let typeCustomer="Diamond";
+    let discount="10";
+    let quantityIncluded="10";
+    let renDays="7";
+    let totalpay ;
+
+    let choose= parseInt(prompt("1.Hien thi thong tin khach hang"+"\n"+
+        "2.Chinh sua thong tin khach hang"+"\n"+
+        "3.Hien thi gia sau khi giam gia"));
+    switch (choose){
+        case 1: {
+            alert("Ten: "+ name +"\n"+
+                "Cmnd: "+ cmnd +"\n"+
+                "Ngay sinh: "+ birthday +"\n"+
+                "Email: "+email+"\n"+
+                "Dia chi: "+address+"\n"+
+                "Loai dich vu:"+ typeService+"\n"+
+                "Loai phong: "+ typeRoom+"\n"+
+                "Loai khach hang :"+typeCustomer+"\n"+
+                "Giam gia: "+discount+"\n"+
+                "So luong di kem: "+quantityIncluded+"\n"+
+                "So ngay :" +renDays);
+            break;
+        }
+        case 2:{
+            let chooseEdit =parseInt(prompt("1.Ten: "+ name +"\n"+
+                "2.Cmnd: "+ cmnd +"\n"+
+                "3.Ngay sinh: "+ birthday +"\n"+
+                "4.Email: "+email+"\n"+
+                "5.Dia chi: "+address+"\n"+
+                "6.Loai dich vu:"+ typeService+"\n"+
+                "7.Loai phong: "+ typeRoom+"\n"+
+                "8.Loai khach hang :"+typeCustomer+"\n"+
+                "9.Giam gia: "+discount+"\n"+
+                "10.So luong di kem: "+quantityIncluded+"\n"+
+                "11.So ngay :" +renDays));
+            switch (chooseEdit) {
+                case 1 : {
+                    name=prompt("Enter name:");
+                    break;}
+                case 2 : {
+                    cmnd=prompt("Enter cmnd:");
+                    break;}
+                default:{
+                    alert("Failed");
+                }
+            }
+            alert("Ten: "+ name +"\n"+
+                "Cmnd: "+ cmnd +"\n"+
+                "Ngay sinh: "+ birthday +"\n"+
+                "Email: "+email+"\n"+
+                "Dia chi: "+address+"\n"+
+                "Loai dich vu:"+ typeService+"\n"+
+                "Loai phong: "+ typeRoom+"\n"+
+                "Loai khach hang :"+typeCustomer+"\n"+
+                "Giam gia: "+discount+"\n"+
+                "So luong di kem: "+quantityIncluded+"\n"+
+                "So ngay :" +renDays);
+            break;
+        }
+        default:{
+            alert("Su lua chon cua ban khong co trong trinh don")
+        }
+        case 3 :{
+            let money =0;
+            if (typeService==="Villa"){
+                money= 500;
+            } else if(typeService==="House"){
+                money= 300;
+            }else  if(typeService==="Room"){
+                money= 100;
+            }
+            let temp = 0;
+            if (address==="Da Nang"){
+                temp+=20;
+            }else if(address==="Hue"){
+                temp+=10;
+            }else  if(address==="Quang Nam"){
+                temp+=5;
+            }
+            if (renDays>7){
+                temp +=30;
+            }else if(renDays>5){
+                temp +=20;
+            }else if(renDays>2){
+                temp+=10;
+            }
+            if(typeCustomer==="Diamond"){
+                temp+=15;
+            }else if(typeCustomer==="Platium"){
+                temp+=10;
+            }else if (typeCustomer==="Gold"){
+                temp+=5;
+            }else if (typeCustomer==="Silver"){
+                temp+=2;
+            }else if(typeCustomer==="Member"){
+                temp+=0;
+            }
+            alert("Total pay: "+(money*renDays-temp));
+            break;
+        }
+    }
+</script>
+</body>
+</html>

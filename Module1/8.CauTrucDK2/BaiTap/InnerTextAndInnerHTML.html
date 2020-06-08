@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p onclick="changeText()" id="text">Hello</p>
+<script>
+function changeText() {
+
+    document.getElementById("text").innerHTML="<input id='1' value='123'>"
+    alert(document.getElementById("text").textContent)
+}
+</script>
+</body>
+</html>

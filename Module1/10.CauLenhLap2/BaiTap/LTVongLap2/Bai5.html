@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinhLai</title>
+</head>
+<body>
+<script>
+
+    let tienVay=parseInt(prompt("Nhập số tiền muốn vay: "));
+    let soThang=parseInt(prompt("Nhập số tháng để trả: "));
+    let laiSuat=parseInt(prompt("Nhập lãi suất: "));
+    let b= (laiSuat/100)/soThang;
+
+    for(let i=1;i<=soThang;i++){
+        tienVay += tienVay*b;
+        alert("Tiền tháng "+ i + " phải trả là: "+tienVay.toFixed(2)); // Hàm a.toFixed(n): Trả về số thực a có n số sau dấu phẩy.
+
+    }
+
+</script>
+</body>
+</html>

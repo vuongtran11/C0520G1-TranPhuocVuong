@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+</head>
+<body>
+<form name="convetCurrency">
+    <label> Amount</label>
+    <input type="text" id="tien">
+    <label> From Currency</label>
+    <select id="tien_goc">
+        <option value="VND">vn</option>
+        <option value="USD" selected>my</option>
+    </select>
+    <label> To Currency</label>
+    <select id="tien_doi">
+        <option value="VND" selected>VND</option>
+        <option value="USD"> USD</option>
+    </select>
+    <input type="button" value="Convert" onclick="doi_tien()" >
+</form>
+<p id="hien_thi"></p>
+<script>
+    function doi_tien() {
+        let nhap_tien = document.getElementById("tien").value;
+        let tien_doi = document.getElementById("tien_doi").value;
+        let tien_goc= document.getElementById("tien_goc").value;
+        nhap_tien = parseInt(nhap_tien);
+        let ket_qua=0;
+        if(tien_goc == "USD"&& tien_doi == "VND")
+            ket_qua = nhap_tien * 23000;
+        else if (tien_goc=="VND"&& tien_doi=="USD")
+            ket_qua = nhap_tien / 23000;
+        else
+            ket_qua="--Bạn chọn lại đơn vị cần đổi";
+        document.getElementById("hien_thi").innerHTML ="Kết quả: "+ ket_qua;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DTichHV</title>
+</head>
+<body>
+<script>
+    let a;
+    do {
+        a = prompt('Nhap canh a:') * 1;
+        if (!isNaN(a)) {
+            break;
+        } else {
+            alert('Ban can nhap mot so');
+        }
+    } while (isNaN(a)) ;
+    let dientich = a * a;
+    alert('Dien tich hinh vuong : ' + dientich + 'm2');
+</script>
+</body>
+</html>

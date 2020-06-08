@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UDMayTinh</title>
+</head>
+<body>
+<form>
+    <h2>Caculator</h2>
+    <input type="number" id="num1">
+    <input type="number" id="num2"><br>
+    <br>
+    <button type="button" onclick="cong()">Addition(+)</button>
+    <button type="button" onclick="tru()">Subtraction(-)</button>
+    <button type="button" onclick="nhan()">Mutiplicaltion(X)</button>
+    <button type="button" onclick="chia()">Davision(/)</button>
+    <p id="kq"></p>
+    <script>
+        function cong() {
+        let a=parseInt(document.getElementById("num1").value);
+        let b=parseInt(document.getElementById("num2").value);
+        let ketqua;
+        ketqua=a+b;
+        document.getElementById("kq").innerHTML=("Result: "+ketqua);
+        }
+        function tru() {
+            let a=parseInt(document.getElementById("num1").value);
+            let b=parseInt(document.getElementById("num2").value);
+            let ketqua;
+            ketqua=a-b;
+            document.getElementById("kq").innerHTML=("Result: "+ketqua);
+        }
+        function nhan() {
+            let a=parseInt(document.getElementById("num1").value);
+            let b=parseInt(document.getElementById("num2").value);
+            let ketqua;
+            ketqua=a*b;
+            document.getElementById("kq").innerHTML=("Result: "+ketqua);
+        }
+        function chia() {
+            let a=parseInt(document.getElementById("num1").value);
+            let b=parseInt(document.getElementById("num2").value);
+            let ketqua;
+            ketqua=a/b;
+            document.getElementById("kq").innerHTML=("Result: "+ketqua);
+        }
+    </script>
+</form>
+</body>
+</html>

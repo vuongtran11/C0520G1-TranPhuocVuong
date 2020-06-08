@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PTBac2</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhap A(A.x2+B.x+C=0):") * 1;
+    let b = prompt("Nhap A(A.x2+B.x+C=0):") * 1;
+    let c = prompt("Nhap A(A.x2+B.x+C=0):") * 1;
+    if ((a === 0) && (b === 0)) {
+        alert("Phuong Trinh Vo Nghiem")
+    } else if (a === 0) {
+        alert("Gia tri cua x :" + (-c / b));
+    } else if ((b === 0) && (-c / a >= 0)) {
+        alert("Gia tri cua x :+-" + Math.sqrt(-c / a));
+    } else if ((b === 0) && (-c / a < 0)) {
+        alert("Phuong trinh vo nghiem");
+    } else {
+        alert("Gia tri cua x la:" + ((-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)) + " va " + ((-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)));
+    }
+</script>
+</body>
+</html>

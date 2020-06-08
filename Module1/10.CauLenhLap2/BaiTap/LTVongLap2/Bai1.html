@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InFibonaci</title>
+</head>
+<body>
+<script>
+
+    let a=0;
+    let b=1;
+    let count=2;
+    let number= parseInt(prompt("Nhập vào số lượng số Fi:"));
+    let text=(a+" "+b+" ");
+    let c;
+    while (count<number) {
+        // a = a + b;
+        // b = b + a;
+        if(number%2!=0){
+            a=a+b;
+            b=b+a;
+            text+=(a+" ");
+            count++;
+        }
+        else if(number%2==0) {
+            a=a+b;
+            b=b+a;
+            text+= (a+" "+b+" ");
+            count=count+2;
+        }
+
+    }
+    document.write(text)
+</script>
+
+</body>
+</html>

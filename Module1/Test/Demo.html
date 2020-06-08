@@ -5,17 +5,54 @@
     <title>Demo</title>
 </head>
 <body>
-<form>
-    <h3>Ho va ten :</h3>
-    <input type="text">
-    <p>Email :</p>
-    <input type="text">
-    <p>So dien thoai :</p>
-    <input type="number">
-    <p>Gioi tinh :</p>
-    <input type="radio" checked >Nam
-    <input type="radio">Nu<br>
-    <button type="submit">dk</button>
-</form>
+<!--<form>
+    <label>Amount</label>
+    <input type="number" id="tien">
+    <label>From Currency</label>
+    <select id="tien_goc">
+        <option>Viet Nam</option>
+        <option>My</option>
+    </select>
+    <label>To Currency</label>
+    <select id="tien_doi">
+        <option>VND</option>
+        <option>USD</option>
+    </select>
+    <input type="button" value="Convert" onclick="doi_tien()">
+    <p id="hienthi"></p>
+</form>-->
+<script>
+    /*function doi_tien(){
+    let nhap_tien=parseInt(document.getElementById("tien").value) ;
+    let tien_goc= document.getElementById("tien_goc").value;
+    let tien_doi= document.getElementById("tien_doi").value;
+    let ketqua = 0 ;
+    if(tien_goc=='Viet Nam'&&tien_doi=='USD')
+        ketqua=nhap_tien/24000;
+    else if(tien_goc=='My'&&tien_doi=='VND')
+        ketqua=nhap_tien*24000;
+    else
+        ketqua=nhap_tien;
+        document.getElementById("hienthi").innerHTML='Ket qua :'+ ketqua;
+    }*/
+    /*let sum=0;
+    let a= prompt('Nhap gia tri a : ');
+    for(let i=0;i<=a;i++){
+        if(a%i==0 ) {
+            sum+=i;
+        }
+    }
+    document.write('Sum = '+ sum);
+    */
+
+    let arr =prompt('Nhap:');
+    alert(arr);
+    let a=(arr.split('a'));
+    alert(a);
+    alert(a.length-1)
+
+</script>
+
+
 </body>
 </html>

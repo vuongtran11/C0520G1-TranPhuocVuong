@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HocLuc</title>
+</head>
+<body>
+<script>
+    let a= parseInt(prompt("Nhập điểm thi 1 tiết: "));
+    let b= parseInt(prompt("Nhập điểm thi Giua Ky: "));
+    let c= parseInt(prompt("Nhập điểm thi Cuoi Ky: "));
+    let diemTB = (a+b*2+c*3)/6;
+    if(diemTB>=8){
+        alert("Điểm TB là: "+diemTB +"\n Xếp loại Giỏi");}
+    else if(diemTB>=6.5){
+        alert("Điểm TB là: "+diemTB + "\n Xếp loại Khá");}
+    else if(diemTB>=5){
+        alert("Điểm TB là: "+diemTB + "\n Xếp loại TB");}
+    else alert("Điểm TB là: "+diemTB + "\n Xếp loại Yeu");
+</script>
+</body>
+</html>

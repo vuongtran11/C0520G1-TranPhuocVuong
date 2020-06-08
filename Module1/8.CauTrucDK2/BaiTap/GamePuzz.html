@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="div1"><img id="img0" onclick="changeImg('0')" src="images/cat0.jpg"></p><br>
+<img id="img1" onclick="changeImg('1')" src="images/cat1.jpg"><br>
+<img id="img2" onclick="changeImg('2')" src="images/monkey2.jpg"><br>
+<!--<img id="img3" onclick="changeImg('3')" src="images/cat3.jpg"><br>-->
+<!--<img id="img4" onclick="changeImg('4')" src="images/cat4.jpg"><br>-->
+<script>
+    function changeImg(indexImg) {
+        let img0=document.getElementById("img0");
+        let img1=document.getElementById("img1");
+        let img2=document.getElementById("img2");
+        // let img3=document.getElementById("img3");
+        // let img4=document.getElementById("img4");
+
+        switch (indexImg) {
+            case "0":
+                alert(img0.src);
+                if(img0.getAttribute("src")=="images/cat0.jpg") {
+                    img0.src = "images/monkey0.jpg";
+                } else if(img0.getAttribute("src")=="images/monkey0.jpg"){
+                    img0.src = "images/panda0.jpg";
+                } else {
+                    img0.src = "images/cat0.jpg";
+                }
+                break;
+            case "1":
+                if(img1.getAttribute("src")=="images/cat1.jpg") {
+                    img1.src = "images/monkey1.jpg";
+                } else if(img1.getAttribute("src")=="images/monkey1.jpg"){
+                    img1.src = "images/panda1.jpg";
+                } else {
+                    img1.src = "images/cat1.jpg";
+                }
+                break;
+            case "2":
+                if(img2.getAttribute("src")=="images/cat2.jpg") {
+                    img2.src = "images/monkey0.jpg";
+                } else if(img2.getAttribute("src")=="images/monkey2.jpg"){
+                    img2.src = "images/panda2.jpg";
+                } else {
+                    img2.src = "images/cat2.jpg";
+                }
+                break;
+            // case "3":
+            //     if(img0.getAttribute("src")=="images/cat0.jpg") {
+            //         img0.src = "images/monkey0.jpg";
+            //     } else if(img0.getAttribute("src")=="images/monkey0.jpg"){
+            //         img0.src = "images/panda0.jpg";
+            //     } else {
+            //         img0.src = "images/cat0.jpg";
+            //     }
+            // case "4":
+            //     if(img0.getAttribute("src")=="images/cat0.jpg") {
+            //         img0.src = "images/monkey0.jpg";
+            //     } else if(img0.getAttribute("src")=="images/monkey0.jpg"){
+            //         img0.src = "images/panda0.jpg";
+            //     } else {
+            //         img0.src = "images/cat0.jpg";
+            //     }
+
+        }
+        if(img0.getAttribute("src")==="images/cat0.jpg"&&img1.getAttribute("src")==="images/cat1.jpg"&&img2.getAttribute("src")==="images/cat2.jpg") {
+            document.getElementById("div1").style.borderColor="red";
+            document.getElementById("div1").style.borderStyle="solid"
+        } else if(img0.getAttribute("src")==="images/monkey0.jpg"&&img1.getAttribute("src")==="images/monkey1.jpg"&&img2.getAttribute("src")==="images/monkey2.jpg") {
+            document.getElementById("div1").style.borderColor="blue";
+            document.getElementById("div1").style.borderStyle="solid"
+        }
+    }
+</script>
+</body>
+</html>

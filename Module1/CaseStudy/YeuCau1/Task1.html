@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC1.Task1</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeService;
+    let typeRoom;
+    let typeCustomer;
+    let discount;
+    let quantityIncluded;
+    let renDays;
+    let totalpay;
+
+    name=prompt("Input name: ");
+    cmnd=prompt("Input cmnd ");
+    birthday=prompt("Input birthday: ");
+    email=prompt("Input email: ");
+    address=prompt("Input address: ");
+    typeService=prompt("Input type service: ");
+    typeRoom=prompt("Input type room: ");
+    typeCustomer=prompt("Input type Customer ");
+    discount=prompt("Input discount: ");
+    quantityIncluded=prompt("Input quantityIncluded: ");
+    renDays=prompt("Input rendays: ");
+    totalpay=300*renDays*(1-discount/100);
+
+    alert("name:"+name+" cmnd:"+cmnd+" totalpay :"+totalpay);
+
+</script>
+</body>
+</html>

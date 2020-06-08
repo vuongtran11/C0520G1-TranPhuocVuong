@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>InTraiTim</title>
+</head>
+<body>
+<script>
+    // let heart = [10, 21, 17, 17, 17, 10, 4];
+    let heart = [198, 297, 273, 257, 257, 257, 130, 68, 40, 16];
+    let space = "&nbsp;&nbsp";
+    let newLine = "<br>";
+    let textPrint = "";
+    let asterisk = "*";
+    for(let i = 0; i < heart.length; i++) {
+        for(let j = 0; j < 9; j++) {
+            if ((heart[i] >> j) & 1) {
+                textPrint += asterisk;
+            } else {
+                textPrint += space;
+            }
+        }
+        textPrint += newLine;
+    }
+    document.write(textPrint);
+</script>
+</body>
+</html>
