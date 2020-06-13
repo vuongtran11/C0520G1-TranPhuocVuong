@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LonHon10</title>
+</head>
+<body>
+<script>
+    //=========C1=========
+    /*let a=[4,6,11,22,33,4,55,44,33,44,55];
+    for(let i=0;i<a.length;i++){
+        if(a[i]>10){
+            document.write(a[i]+'<br>');
+        }
+    }*/
+
+    let a= new Array(10);
+    let count=0;
+    let temp = new Array();
+    while(count<10){
+        let b = parseInt(prompt("Nhập vào phần tử của mảng: "));
+        a[count]=b;
+        count++;
+    }
+    let count1 =0;
+    for(let i=0;i<a.length;i++){
+        if(a[i] >= 10){
+            temp[count1]=a[i];
+            count1++;
+        }
+    }
+    document.write("Các số nguyên lớn hơn 10 có trong mảng là: "+"<br>");
+    for(let i=0;i<temp.length;i++){
+        document.write(temp[i] + " ");
+    }
+
+</script>
+
+</body>
+</html>

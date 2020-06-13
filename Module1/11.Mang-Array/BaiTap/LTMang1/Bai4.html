@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MangDaoNguoc</title>
+</head>
+<body>
+
+<h3 id="result"></h3>
+<script>
+    let num = prompt("Nhap vao so nguyen")*1;
+    let array = new Array();
+    let str = "";
+    let result = document.getElementById("result");
+    for (let i=0;i<num;i++) {
+        array[i] = Math.round(Math.random()*20);
+    }
+    str = array.join(",");
+    str += "<br>" + "Mảng đảo ngược là :<br>";
+    array.reverse();
+    str += array.join(",");
+    result.innerHTML = str;
+</script>
+</body>
+</html>

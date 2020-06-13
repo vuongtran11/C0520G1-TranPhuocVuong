@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DemKyTu</title>
+</head>
+<body>
+<h3 id="result"></h3>
+<script>
+    let array = new Array();
+    let num = prompt("Nhập số ký tự của mảng")*1;
+    let result = document.getElementById("result");
+    let total = 0;
+    for (let i=0;i<num;i++) {
+        array[i] = prompt("Ky tu " + i);
+        total += array[i].length;
+    }
+    str = "Mảng ký tự ban đầu :" + array.join(",") + "<br>";
+    array.reverse();
+    str += "Tổng số ký tự của mảng :" + total + "<br>";
+    result.innerHTML = str;
+</script>
+
+</body>
+</html>

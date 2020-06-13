@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HamCoSan</title>
+</head>
+<body>
+<script>
+    //======Bai1==========
+    /*myColor=["Red","Green","White","Black"];
+    console.log(myColor.toString());
+    console.log(myColor.join());
+    console.log(myColor.join("+"));*/
+
+    //=========Bai2=======
+    /*const num=window.prompt();
+    const str = num.toString();
+    const result = [str[0]];
+
+    for(let x=1; x<str.length; x++)
+    {
+        if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+        {
+            result.push('-', str[x]);
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    console.log(result.join(''));*/
+
+    /* let a = [2, 4, 5, 7, 9, 1, 0, 2, 6, 8];
+       for (let i = 0; i < a.length; i++) {
+           if (a[i] % 2 == 0) {
+               a[i] = a[i] + '-';
+           }
+       }
+       alert(a.join(''));
+       */
+
+    //=======Bai3========
+    /*let st = prompt("Input a string");
+    let a = st.split('');
+    let b = a.map(e=>{
+        return e==e.toUpperCase()?e.toLowerCase(): e.toUpperCase();
+    });
+    document.write(b=(b.join(""))) ;*/
+
+    let str = prompt('Nhap vao chuoi: ');
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let result = [];
+
+    for (let x = 0; x < str.length; x++) {
+        if (UPPER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toLowerCase());
+        } else if (LOWER.indexOf(str[x]) !== -1) {
+            result.push(str[x].toUpperCase());
+        } else {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+
+</script>
+</body>
+</html>

@@ -6,13 +6,15 @@
 </head>
 <body>
 <!--<script Bai1 >
-    for(let i=1;i<=100;i++){
-        if(i<99)
-            document.write(i+" ");
-        else if(i==99)
-            document.write("Hoàn thành");
+    let i;
+    for (i = 1; i <= 100; i++) {
+        document.write(i+ ' ');
+        if(i==99){
+            document.write(' Hoan thanh ');
+        }
     }
 </script>-->
+
 <!--<script Bai2 >
     let temp = prompt("Nhập vào nhiệt độ");
     while (temp < 20 || temp > 100){
@@ -26,18 +28,20 @@
     }
     alert("Nhiệt độ là: "+temp);
 </script>-->
+
 <!--<script Bai3>
     let n0=0;
     let n1=1;
 
     for(i=0;i<20;i++){
-        n3=n0+n1;
+        let n3=n0+n1;
 
         document.write(" "+ n3);
         n0=n1;
         n1=n3;
     }
 </script>-->
+
 <!--<script Bai4>
     let n0=0;
     let n1=1;
@@ -53,7 +57,8 @@
         n1=n3;
     }
 </script>-->
-<script Bai5>
+
+<!--<script Bai5>
     let n0=0;
     let n1=1;
     let sum=0;
@@ -65,6 +70,30 @@
         n1=n3;
     }
     document.write(sum);
+</script>-->
+
+<!--<script  Bai6>
+    let total = 0;
+    for (let i=0;i<30;i++) {
+        total += 7*i;
+    }
+    alert("Gia tri ban can tim la : "+total);
+</script>-->
+
+
+<script Bai7>
+    for (let i = 1; i <= 100; i++) {
+        if ((i % 3 == 0) && (i % 5 == 0)) {
+            document.write(' FizzBuzz ')
+        } else if (i % 3 == 0) {
+            document.write(' Fizz ')
+        } else if (i % 5 == 0) {
+            document.write(' Buzz ')
+        } else {
+            document.write( i + ' ')
+        }
+    }
 </script>
+
 </body>
 </html>

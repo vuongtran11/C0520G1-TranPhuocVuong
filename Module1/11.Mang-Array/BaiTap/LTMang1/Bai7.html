@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 id="result"></h3>
+<script>
+    let array = new Array();
+    let str = "", check = false;
+    let integerNumber = prompt("Nhập số nguyên V của bạn :") * 1;
+    let result = document.getElementById("result");
+    for (let i = 0; i < 10; i++) {
+        array[i] = Math.round(Math.random() * 20);
+        if (array[i] == integerNumber) {
+            check = true;
+        }
+    }
+    str = array.join(",");
+    if (check) {
+        str += "<br> Số nguyên " + integerNumber + " nằm trong mảng của bạn<br>";
+    } else {
+        str += "<br> Số nguyên " + integerNumber + " không nằm trong mảng của bạn<br>";
+    }
+    for (let i = 0; i < 10; i++) {
+        if (array[i] == integerNumber) {
+            array[i] = "";
+        }
+    }
+    str += "Mảng đã xóa V:"+array.join(",");
+    result.innerHTML = str;
+</script>
+</body>
+</html>

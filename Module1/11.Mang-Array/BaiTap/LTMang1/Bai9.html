@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 id="result"></h3>
+<script>
+    let array1 = new Array();
+    let array2 = new Array();
+    let array3 = new Array();
+    let str = "";
+    let result = document.getElementById("result");
+    for (let i=0;i<10;i++) {
+        array1[i] = Math.round(Math.random()*20);
+    }
+    for (let i=0;i<10;i++) {
+        array2[i] = Math.round(Math.random()*20);
+    }
+    str = "Mảng A: " + array1.join(",") + "<br>" + "Mảng B: " + array2.join(",") + "<br>";
+    array3 = array2.concat(array1);
+    str += "Mảng C : " + array3.join(",");
+    result.innerHTML = str;
+</script>
+</body>
+</html>

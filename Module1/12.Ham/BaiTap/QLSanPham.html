@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QLySanPham</title>
+</head>
+<body>
+<input type="text" id="input">
+<button onclick="themSP()">Thêm sản phẩm</button>
+<p id="soSP"></p>
+<p id="hienThi"></p>
+<script>
+    let sanPhamList=['Nokia','Iphone','SamSung'];
+    hienThiSanPham();
+    function hienThiSanPham() {
+        let tableString='<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th style="height: 20px;width: 200px">Tên sản phẩm</th>\n' +
+            '        <th style="height: 20px;width: 200px">Sửa</th>\n' +
+            '        <th style="height: 20px;width: 200px">Xóa</th>\n' +
+            '    </tr>'
+        for(let i=0;i<sanPhamList.length;i++){
+            tableString+='<tr>\n' +
+                '<td style="height: 20px;width: 200px">'+sanPhamList[i]+'</td>\n' +
+                '<td style="height: 20px;width: 30px"><button onclick="suaSP('+i+')">Sửa</button></td>\n' +
+                '<td style="height: 20px;width: 30px"><button onclick="xoaSP('+i+')">Xóa</button></td>\n' +
+                '</tr>'
+        }
+        tableString+='</table>';
+        document.getElementById('hienThi').innerHTML=tableString;
+        document.getElementById('soSP').innerHTML=sanPhamList.length;
+    }
+    function themSP() {
+        sanPhamList.push(document.getElementById('input').value);
+        hienThiSanPham();
+    }
+    function suaSP(i) {
+        let tenSP= prompt('Nhập tên sản phẩm');
+        if(tenSP==''||tenSP==null){
+            alert('Vui long nhap ten can thay doi')
+        }else {
+            sanPhamList[i]=tenSP;
+        }
+        hienThiSanPham();
+    }
+    function xoaSP(i) {
+        sanPhamList.splice(i,1);
+        hienThiSanPham();
+    }
+</script>
+
+</body>
+</html>

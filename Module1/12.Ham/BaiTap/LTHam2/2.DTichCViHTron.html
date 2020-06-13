@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DTichCViHT</title>
+</head>
+<body>
+<script>
+    /*const pi=3.14
+    let a = Math.round(Math.random()*10+1);
+    alert("Bán kính bằng: "+a);
+    alert("Chu vi: "+chuVi(a));
+    alert("Diện tích: "+dienTich(a));
+
+    function chuVi(x) {
+        return 2*pi*x;
+    }
+
+    function dienTich(x) {
+        return x*x*pi;
+    }
+*/
+    let r = prompt("Nhập bán kính hình tròn :")*1;
+
+    function dienTich(r)　{
+        return Math.PI*r*r;
+    }
+
+    function chuVi(r) {
+        return Math.PI*r*2;
+    }
+
+    let dt = dienTich(r);
+    let cv = chuVi(r);
+    alert('Diện tích: '+dt+' Chu Vi: '+cv);
+
+</script>
+</body>
+</html>

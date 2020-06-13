@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TuDIen</title>
+</head>
+<body>
+<input type="text" id="dictionary">
+<button onclick="search()">Tìm Kiếm</button>
+<br>
+<p id="result"></p>
+<script>
+    function search() {
+        let english = ["hello", "how are you", "mother", "father", "teacher", "daughter", "boy", "girl", "table", "chair", "pen", "pencil", "book", "love", "girlfriend", "boyfriend"];
+        let vietnam = ["xin chào", "bạn khỏe không", "mẹ", "bố", "giáo viên", "con gái", "trai", "gái", "cái bàn", "cái ghế", "cây bút", "cây bút chì", "cuốn sách", "tình yêu", "bạn gái", "bạn trai"];
+        let str = document.getElementById("dictionary").value;
+        let result = document.getElementById("result");
+        result.textContent = "";
+        for (let i = 0; i < english.length; i++) {
+            if (english[i] === str) {
+                result.textContent += vietnam[i] + "<br";
+            }
+        }
+        result.innerHTML = result.textContent;
+    }
+</script>
+
+</body>
+</html>

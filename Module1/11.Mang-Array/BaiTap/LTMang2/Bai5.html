@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoSanh2Chuoi</title>
+</head>
+<body>
+<script>
+
+    let a= new Array(10);
+    let b= new Array(10);
+    let i;
+    a = prompt("Nhập mảng thứ nhất: ");
+    b = prompt("Nhập mảng thứ 2: ");
+
+    if(a.length != b.length) {
+        alert("Không giống nhau");
+    } else {
+        for(i=0;i<a.length;i++){
+            if(a[i]!==b[i]){
+                alert("Không giống nhau");
+                break;
+            }
+        }
+        if(i==a.length){
+            alert("Giống nhau")
+        }
+    }
+
+</script>
+</body>
+</html>

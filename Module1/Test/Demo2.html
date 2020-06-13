@@ -5,22 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-<input type="number" id="month">
-<button type="button" onclick="months()">Tinh so ngay</button>
-<p id="show"></p>
-<script>
-    function months() {
-    let a = parseInt(document.getElementById('month').value);
-    switch (a) {
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-        case 5:
-            document.getElementById('show').innerHTML='30 ngay';
 
+<script>
+    let a = [5, 2, 3, 11, 6, 7, 9, 8];
+    let dau = 0;
+    let cuoi = a.length - 1;
+    while (dau < cuoi) {
+        let temp = a[dau];
+        a[dau] = a[cuoi];
+        a[cuoi] = temp;
+        dau++;
+        cuoi--;
     }
-    }
+    document.write(a);
+
 </script>
+
 </body>
 </html>

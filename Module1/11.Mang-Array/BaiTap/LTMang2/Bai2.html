@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DaoMguoc</title>
+</head>
+<body>
+<h3 id="result"></h3>
+<script>
+    let array = new Array();
+    let num = prompt("Nhập số ký tự của mảng")*1;
+    let result = document.getElementById("result");
+    for (let i=0;i<num;i++) {
+        array[i] = prompt("Ky tu " + i);
+    }
+    str = "Mảng ban đầu :" + array.join(",") + "<br>";
+    array.reverse();
+    str += "Đảo ngược mảng :" + array.join(",") + "<br>";
+    result.innerHTML = str;
+</script>
+</body>
+</html>

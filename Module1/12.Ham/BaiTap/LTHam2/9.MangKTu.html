@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MangKyTu</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập vào mảng ký tự :');
+    let char = prompt('Nhập vào ký tự cần tìm :');
+    function findChar(str,char) {
+        let arr = str.split('');
+        let count = 0 ;
+        for (let i=0;i<arr.length;i++) {
+            if (arr[i]===char) {count++;}
+        }
+        return count;
+    }
+    alert(findChar(str,char));
+</script>
+</body>
+</html>

@@ -8,14 +8,23 @@
 
 <script>
 
+    let arr = [1, 2, 6, 10, 8, 71, 88];
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
+    }
+    document.write('Max la ' + max + '<br>');
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    document.write('Sum la ' + sum + '<br>');
+    document.write('TB la ' + sum / arr.length);
+    d
 
-    let count = 0;
-    do {
-        count++;
-    } while (count++ < 10);
-    console.log( count );
-
- </script>
+</script>
 
 </body>
 </html>

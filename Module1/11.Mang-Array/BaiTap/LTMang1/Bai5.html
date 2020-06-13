@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoNguyenAm</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào chuối : ");
+    let array = str.split("",str.length);
+    let vowels = "aoieyuAOIYUE";
+    let num = 0;
+    for (let i=0;i<array.length;i++) {
+        if (vowels.indexOf(array[i]) !== -1) {
+            num++;
+        }
+    }
+    alert("Chuỗi bạn nhập có "+ num +" nguyên âm");
+    document.write(str);
+</script>
+</body>
+</html>

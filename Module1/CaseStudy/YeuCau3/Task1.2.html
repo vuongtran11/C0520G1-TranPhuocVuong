@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC3.Task1.2</title>
+</head>
+<body>
+<script>
+    let name;
+    let cmnd;
+    let birthday;
+    let email;
+    let address;
+    let typeService;
+    let typeRoom;
+    let typeCustomer;
+    let discount;
+    let quantityIncluded;
+    let renDays;
+    let totalpay;
+    let check=false;
+
+    let tempName=" ";
+    name=prompt("Input name: ");
+    name=name.trim().toLowerCase();
+    for(let i=0;i<name.length;i++){
+        if(name.charAt(i)===" "&& name.charAt(i+1)===" "){
+            continue;
+        }
+        if(i===0 || name.charAt(i-1)===" "){
+            tempName+=name.charAt(i).toUpperCase();
+            continue;
+        }
+        tempName+=name.charAt(i);
+    }
+    name=tempName;
+    do{
+        cmnd=prompt("Input cmnd ");
+        if(!isNaN(cmnd)){
+            cmnd=Number.parseFloat(cmnd);
+        }
+        if(!Number.isInteger(cmnd)){
+            alert("CMND khong dung dinh danh");
+            continue;
+        }
+        if(cmnd<10000000 ||cmnd>99999999){
+            alert("CMND khong dung dinh danh");
+            continue;
+        }
+        check=true;
+    }while (!check)
+    check= false;
+    do {
+        birthday=prompt("Input birthday: ");
+        if (birthday.charAt(2)==='/'&& birthday.charAt(5)==='/'){
+            let day = birthday.substring(0,2);
+            let month = birthday.substring(3,5);
+            let year = birthday.substring(6,10);
+            if(!isNaN(day)&&!isNaN(month)&&!isNaN(year)){
+                day = Number.parseFloat(day);
+                month = Number.parseFloat(month);
+                year = Number.parseFloat(year);
+                if(Number.isInteger(day)&& Number.isInteger(month)&& Number.isInteger(year)){
+                    if(day<32 && month<13 && year >1950){
+                        check=true;
+                    }
+                }
+             }
+        }
+        if(!check){
+            alert('Ngay sinh khong dung dinh dang')
+        }
+    } while (!check)
+    check=false;
+    do{
+       let countAt=0;
+       let countDoc=0;
+        email=prompt("Input email: ");
+        for(let i=0;i<email.length;i++){
+            if(email.charAt(i)==="@"){
+                countAt++;
+                for(let j=i+1;j<email.length;j++){
+                     if(email.charAt(j)==="."){
+                      countDoc++;
+            }
+            }
+            }
+        }
+        if(countAt !=1||countDoc<1){
+            alert("Email ban nhap khong dung")
+        }else {
+            check=true;
+        }
+    }while (!check)
+    check= false;
+    address=prompt("Input address: ");
+    typeService=prompt("Input type service: ");
+    typeRoom=prompt("Input type room: ");
+    typeCustomer=prompt("Input type Customer ");
+    discount=prompt("Input discount: ");
+    quantityIncluded=prompt("Input quantityIncluded: ");
+    do {
+        renDays=prompt("Input rendays: ");
+        if(!isNaN(renDays)){
+            renDays=Number.parseFloat(renDays);
+            if(Number.isInteger(renDays)&&(renDays >0)){
+                check=true;
+            }
+        }
+        if(!check){
+            alert('RentDays khong phai so nguyen duong')
+        }
+    }while (!check)
+    check=false;
+
+    totalpay=300*renDays*(1-discount/100);
+
+    alert("name:"+name+" cmnd:"+cmnd+" totalpay :"+totalpay);
+
+</script>
+</body>
+</html>
