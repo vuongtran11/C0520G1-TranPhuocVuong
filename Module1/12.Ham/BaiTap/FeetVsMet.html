@@ -5,26 +5,43 @@
     <title>FeetVsMet</title>
 </head>
 <body>
-    <label>Nhap met:</label>
-    <input type="text" id="input1" >
-    <p id="kq1"></p>
-    <button onclick="toMet(parseInt(document.getElementById('input1').value))">Ket qua= Feet</button>
-    <br/>
-    <br/>
-    <label>Nhap feet:</label>
-    <input type="text" id="input2" >
-    <p id="kq2"></p>
-    <button onclick="toFeet(parseInt(document.getElementById('input2').value))">Ket qua= Met</button>
+<!--<label>Nhap met:</label>
+<input type="text" id="input1">
+<p id="kq1"></p>
+<button onclick="toMet(parseInt(document.getElementById('input1').value))">Ket qua= Feet</button>
+<br/>
+<br/>
+<label>Nhap feet:</label>
+<input type="text" id="input2">
+<p id="kq2"></p>
+<button onclick="toFeet(parseInt(document.getElementById('input2').value))">Ket qua= Met</button>
 <script>
     // let a =parseInt(prompt('Nhap met'));
     // let b =parseInt(prompt('Nhap feet'));
     // alert("Met la:"+ toMet(b));
     // alert("Feet la:"+ toFeet(a));
-    function  toMet(a) {
-        document.getElementById('kq1').innerHTML= 3.279 * a;
+    function toMet(a) {
+        document.getElementById('kq1').innerHTML = 3.279 * a;
     }
+
     function toFeet(b) {
-        document.getElementById('kq2').innerHTML= b* 0.305;
+        document.getElementById('kq2').innerHTML = b * 0.305;
+    }
+</script>-->
+
+<input type="number" id="in"><br>
+<button onclick="toMet()">Meet to Feet</button>
+<button onclick="toFeet()">Feet to Meet</button>
+<p id="result"></p>
+<script>
+    function toMet() {
+        let a = parseInt(document.getElementById('in').value);
+        document.getElementById('result').innerHTML = 3.279 * a;
+    }
+
+    function toFeet() {
+        let a = parseInt(document.getElementById('in').value);
+        document.getElementById('result').innerHTML = a * 0.305;
     }
 
 </script>

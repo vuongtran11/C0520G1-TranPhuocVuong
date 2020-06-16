@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    let a= prompt('Nhap vao so thu nhat:')*1;
+    /*let a= prompt('Nhap vao so thu nhat:')*1;
     let b= prompt('Nhap vao so thu hai:')*1;
     soSanh(a,b);
     function soSanh(x,y) {
@@ -15,7 +15,21 @@
         }else {
             alert('Sum: '+ (x+y));
         }
+    }*/
+
+    let a = prompt('Nhap vao so thu nhat:') * 1;
+    let b = prompt('Nhap vao so thu hai:') * 1;
+
+    function soSanh(x, y) {
+        if (x > y) {
+            alert('So thu nhat lon hon so thu hai')
+        } else if (x <= y) {
+            alert('Sum : ' + (x + y));
+        }
     }
+
+    soSanh(a, b);
+    
 </script>
 </body>
 </html>

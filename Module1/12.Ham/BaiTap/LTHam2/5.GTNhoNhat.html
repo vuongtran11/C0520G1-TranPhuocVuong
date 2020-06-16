@@ -6,16 +6,23 @@
 </head>
 <body>
 <script>
-    let num1 = prompt('Nhập số nguyên thứ nhất')*1;
-    let num2 = prompt('Nhập số nguyên thứ hai')*1;
-    let num3 = prompt('Nhập số nguyên thứ ba')*1;
-    function findMin(a,b,c) {
+    let num1 = prompt('Nhập số nguyên thứ nhất') * 1;
+    let num2 = prompt('Nhập số nguyên thứ hai') * 1;
+    let num3 = prompt('Nhập số nguyên thứ ba') * 1;
+
+    function findMin(a, b, c) {
         let min = a;
-        if (min>b) { min = b;}
-        if (min>c) { min = c;}
+        if (min > b) {
+            min = b;
+        }
+        if (min > c) {
+            min = c;
+        }
         return min;
     }
-    alert('Số nguyên nhỏ nhất :'+findMin(num1,num2,num3));
+
+    alert('Số nguyên nhỏ nhất :' + findMin(num1, num2, num3));
+
 </script>
 </body>
 </html>

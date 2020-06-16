@@ -8,15 +8,20 @@
 <script>
     let str = prompt('Nhập vào mảng ký tự :');
     let char = prompt('Nhập vào ký tự cần tìm :');
-    function findChar(str,char) {
+
+    function findChar(str, char) {
         let arr = str.split('');
-        let count = 0 ;
-        for (let i=0;i<arr.length;i++) {
-            if (arr[i]===char) {count++;}
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === char) {
+                count++;
+            }
         }
         return count;
     }
-    alert(findChar(str,char));
+
+    alert(findChar(str, char));
+
 </script>
 </body>
 </html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài kiểm tra 4</title>
+</head>
+<body>
+<!--<fieldset name="Register">-->
+<!--    <form>-->
+<!--        <label>Tên đăng nhập</label> <input><br>-->
+<!--        <label>Tên nhân viên</label><input><br>-->
+<!--        <label>Mật khẩu</label><input><br>-->
+<!--        <label>Ngày sinh</label><input><br>-->
+<!--        <label>Số CMND</label><input><br>-->
+<!--        <label>Giới tính</label><input><br>-->
+<!--        <label>Địa chỉ</label><input><br>-->
+<!--        <label>Số điện thoại</label><input><br>-->
+<!--        <input type="button" value="Register">-->
+<!--    </form>-->
+<!--</fieldset>-->
+<!--<table border="1" id="table">-->
+<!--</table>-->
+<script>
+    // luyện tập tạo class nhân viên trong case study
+    //  let tab=document.getElementById('table');
+     class Employee{
+         constructor(tendn,pass,name,birth,address,gender,idcard,phone) {
+             this.tendn=tendn;
+             this.pass=pass;
+             this.name=name;
+             this.birth=birth;
+             this.address=address;
+             this.gender=gender;
+             this.idcard=idcard;
+             this.phone=phone;
+
+         }
+         getTendn(){
+             return this.tendn;
+         }
+         setTendn(tendn){
+             this.tendn=tendn;
+         }
+         getPass(){
+             return this.pass
+         }
+         setPass(pass){
+             this.pass=pass;
+         }
+         getName(){
+             return this.name;
+         }
+         setName(name){
+             this.name=name;
+         }
+         getBirth(){
+             return this.birth;
+         }
+         setBirth(birth){
+             this.birth=birth;
+         }
+         getAddress(){
+             return this.address;
+         }
+         setAddress(address){
+             this.address=address;
+         }
+         getGenDer(){
+             return this.gender;
+         }
+         setGender(gender){
+             this.gender=gender;
+         }
+         getIdcard(){
+             return this.idcard;
+         }
+         setIdcard(idcard){
+             this.idcard=idcard;
+         }
+         getPhone(){
+             return this.phone;
+         }
+         setPhone(phone){
+             this.phone=phone;
+         }
+
+     }
+    function displayMenuEmployee() {
+             let choose = parseInt(prompt('1.Thêm nhân viên.' + '\n' +
+                 '2.Hiển thị nhân viên' + '\n' +
+                 '3.Sủa nhân viên' + '\n' +
+                 '4.Thoát.'));
+             switch (choose) {
+                 case 1:{
+                     // alert('Chọn 1 à, chắc chưa????');
+                     addEmployee();
+                     break;
+                 }
+                 case 2:{
+                     // alert('bạn đã số 3: ');
+                     displayInformation();
+                     break;
+                 }
+
+                 case 3:{
+                     deleteEmployee();
+                     break;
+                 }
+                 case 4:{
+                     confirm('Bạn muốn thoát phải không?????');
+                     exit();
+                     break;
+                 }
+                 default:{
+                     alert('Vui lòng chọn lại!');
+                 }
+             }
+       displayMenuEmployee();
+     }
+    function addEmployee(){
+        let regexBirthday = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
+        let kiemtra = false;
+        let tendn1 =prompt('nhập tên đăng nhậpp');
+        let pass1 = prompt('Nhập mật khẩu');
+        let name1=prompt('nhập tên');
+        let birthday1;
+        // do {
+        //
+        // }while ()
+        let birthaday1 = prompt('ngày sinh');
+        let add=prompt('địa chỉ');
+        let gender1=prompt('Giới tính');
+        let idcar1=prompt('Số CMND');
+        let phone1=prompt('Nhập số điện thoại')
+        displayMenuEmployee();
+    }
+displayMenuEmployee();
+</script>
+</body>
+</html>

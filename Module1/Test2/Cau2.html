@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    /*function removeFruit() {
+        let str = prompt("Nhap vao loai trai cay : ");
+        let fruit=['Apple','Banana','Lemon'];
+        let array = str.split("",str.length);
+        let vowels = " ";
+        let num = 0;
+        for (let i=0;i<fruit.length;i++) {
+            if (vowels.indexOf(fruit[i]) !== -1) {
+                num++;
+            }
+        }
+        document.write(fruit);
+    }*/
+
+        function removeFruit(namefruit) {
+            let fruit = ['Apple', 'Banana', 'Lemon'];
+            for (let i = 0; i < fruit.length; i++) {
+                if (namefruit == fruit[i]) {
+                    for (let j = i; j < fruit.length; j++) {
+                        fruit[j] = fruit[j + 1];
+                    }
+                    fruit[2] = '';
+                }
+            }
+            return fruit;
+        }
+        let fruit = prompt("Nhập tên của loại trái cây : ");
+        let show = removeFruit(fruit);
+        alert(show);
+
+</script>
+</body>
+</html>

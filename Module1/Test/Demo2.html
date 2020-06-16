@@ -7,19 +7,22 @@
 <body>
 
 <script>
-    let a = [5, 2, 3, 11, 6, 7, 9, 8];
-    let dau = 0;
-    let cuoi = a.length - 1;
-    while (dau < cuoi) {
-        let temp = a[dau];
-        a[dau] = a[cuoi];
-        a[cuoi] = temp;
-        dau++;
-        cuoi--;
+    let str=prompt('Nhap vao mang');
+    let char=prompt('Nhap ky tu can tim');
+    function findChar(str,char) {
+        let arr=str.split('');
+        let count=0;
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]===char){
+                count++;
+            }
+        }
+        return count;
     }
-    document.write(a);
+    alert(findChar(str,char));
+
+
 
 </script>
-
 </body>
 </html>

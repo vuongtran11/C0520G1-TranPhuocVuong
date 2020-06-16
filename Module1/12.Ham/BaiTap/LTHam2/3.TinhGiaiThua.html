@@ -6,12 +6,18 @@
 </head>
 <body>
 <script>
-    let num = prompt('Nhập vào số nguyên :')*1;
+    let num = prompt('Nhập vào số nguyên :') * 1;
+
     function factorial(num) {
-        if (num==2) { return 2; }
-        else if (num>2) { return num*factorial(num-1);}
+        if (num == 2) {
+            return 2;
+        } else if (num > 2) {
+            return num * factorial(num - 1);
+        }
     }
+
     alert(factorial(num));
+
 </script>
 </body>
 </html>

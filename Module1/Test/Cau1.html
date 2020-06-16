@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let array = new Array();
+    let str = "";check= false;
+    let integerNumber = prompt("Nhập số nguyên của bạn :")*1;
+    let result = document.getElementById("result");
+    for (let i=0;i<6;i++) {
+        array[i] = Math.round(Math.random()*20);
+        if (array[i] == integerNumber) { check = true;}
+    }
+    str = array.join(",");
+    if (check) {
+        str += "<br> Số nguyên " + integerNumber + " nằm trong mảng của bạn";
+    } else {
+        str += "<br> Số nguyên " + integerNumber + " không nằm trong mảng của bạn";
+    }
+    array = array.sort(function (a,b) { return a-b; });
+    str += "<br> Sắp Xếp Mảng:";
+    str += array.join(",");
+    result.innerHTML = str;
+</script>
+</body>
+</html>

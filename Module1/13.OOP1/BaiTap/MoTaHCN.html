@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MoTaHCN</title>
+</head>
+<body>
+<!--<canvas id="myCanvas" width="110px" height="200px" style="border:1px solid #d3d3d3;"></canvas>-->
+<canvas id="myCanvas1" width="500px" height="500px" style="border:1px solid #d39d4f;"></canvas>
+
+<script>
+    /*let Rectangle = function (width,height) {
+        this.width = width;
+        this.height = height;
+        this.getWidth = function () {
+            return this.width;
+        };
+        this.getHeight = function () {
+            return this.height;
+        };
+        this.setWidth = function (width) {
+            this.width = width;
+        };
+        this.setHeight = function (height) {
+            this.height = height;
+        };
+        this.calculateArea = function () {
+            return this.width*this.height;
+        };
+        this.calculatePerimeter= function () {
+            return (this.width+this.height)/2;
+        };
+        this.drawRegtangle = function() {
+            let ctx = document.getElementById('myCanvas1').getContext('2d');
+            ctx.beginPath();
+            ctx.rect(0,0,this.width,this.height);
+            ctx.stroke();
+        }
+    };
+    let rectangle = new Rectangle(150,100);
+    rectangle.drawRegtangle();
+    alert(rectangle.calculateArea());
+    alert(rectangle.calculatePerimeter());*/
+
+    /* rectangle.setWidth(20);
+     rectangle.setHeight(40);
+     alert(rectangle.calculateArea());
+     alert(rectangle.calculatePerimeter());*/
+
+    //==========Clacss=========
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        calculateArea() {
+            return this.width * this.height;
+        }
+        calculatePerimeter() {
+            return (this.width + this.height) / 2;
+        }
+        drawRegtangle() {
+            let ctx = document.getElementById('myCanvas1').getContext('2d');
+            ctx.beginPath();
+            ctx.rect(0, 0, this.width, this.height);
+            ctx.stroke();
+        }
+    }
+
+    let rectangle = new Rectangle(250, 100);
+    rectangle.drawRegtangle();
+    alert('S:'+rectangle.calculateArea());
+    alert('P:'+rectangle.calculatePerimeter());
+
+</script>
+</body>
+</html>

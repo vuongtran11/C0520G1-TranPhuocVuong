@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>severny</title>
+</head>
+<body>
+    <hr>
+    <h1>Market Research Survey</h1>
+    <label>Please take a few moments to complete this satisfaction survey.</label>
+    </hr>
+<form name="suverny" action="suverny.html">
+    <ul>
+        <li><b>What is your age range?</b><br>
+    <select name="age"style="width: 500px">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="34-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+    </li>
+        <li><b>What is your yearly income range?</b><br>
+    <select name="incom" style="width: 500px">
+        <option value="$0-$25000">$0-$25000</option>
+        <option value="$25000-$50000">$25000-$50000</option>
+        <option value="$50001-$100000">50001-$100000</option>
+        <option value="100000+">1000000+</option>
+    </select>
+    </li>
+    <li><b>Gender</b><br>
+        <input name="sex" type="radio" value="Male">Male<br>
+        <input name="sex" type="radio" value="Female">feMale<br>
+    </li>
+        <li><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b><br>
+        <input name="product" type="checkbox" value="product 1" >product 1<br>
+        <input name="product" type="checkbox" value="product 2" >product 2<br>
+        <input name="product" type="checkbox" value="product 3" >product 3<br>
+    </li>
+     <li><b>How often would you use our new product?</b><br>
+         <input name="new" type="radio" value="Daily">Daily<br>
+         <input name="new" type="radio" value="Weekly">Weekly<br>
+         <input name="new" type="radio" value="Monthly">Monthly<br>
+     </li>
+    <li><b>What would you pay for the new product?</b><br>
+        $ <pr></pr><input name="money" type="text" style="width: 70px">-
+                    <input name="money" type="text"style="width: 10px"><br>
+            <label style="margin: 20px">Dollars</label>
+            <label style="margin: 10px;">Cent</label>
+    </li>
+     <li>
+        <b>What features would you like to see in the new product.</b><br>
+         <textarea name="features" cols="50" rows="5"></textarea>
+     </li>
+     <li><b>Please rate your level of agreement with the following statements.</b>
+         <table border="1">
+             <tr style="background-color: cadetblue">
+             <th></th>
+             <th align="center" width="100px">Strongly Disagre</th>
+             <th align="center" width="100px">Disagre</th>
+             <th align="center" width="100px">Agree</th>
+              <th align="center" width="100px">Strongly Agree</th></tr>
+             <tr>
+                 <td>Our products are priced fairly.</td>
+                 <td align="center"><input name="Strongly" type="radio" value="1"><br><label style="margin: 5px">1</label> </td>
+                 <td align="center"><input name="Strongly" type="radio" value="2"><br><label style="margin: 5px">2</label> </td>
+                 <td align="center"><input name="Strongly" type="radio" value="3"><br><label style="margin: 5px">3</label> </td>
+                 <td align="center"><input name="Strongly" type="radio" value="4"><br><label style="margin: 5px">4</label> </td>
+             </tr>
+             tr>
+             <td>Our products are high quality.	</td>
+             <td align="center"><input name="quality" type="radio" value="1"><br><label style="margin: 5px">1</label> </td>
+             <td align="center"><input name="quality" type="radio" value="2"><br><label style="margin: 5px">2</label> </td>
+             <td align="center"><input name="quality" type="radio" value="3"><br><label style="margin: 5px">3</label> </td>
+             <td align="center"><input name="quality" type="radio" value="4"><br><label style="margin: 5px">4</label> </td>
+             </tr>
+             tr>
+             <td>You would recommend our product to a friend or coworker.	</td>
+             <td align="center"><input name="coworker" type="radio" value="1"><br><label style="margin: 5px">1</label> </td>
+             <td align="center"><input name="coworker" type="radio" value="2"><br><label style="margin: 5px">2</label> </td>
+             <td align="center"><input name="coworker" type="radio" value="3"><br><label style="margin: 5px">3</label> </td>
+             <td align="center"><input name="coworker" type="radio" value="4"><br><label style="margin: 5px">4</label> </td>
+             </tr>
+         </table>
+     </li>
+     <li>
+         <input type="submit" value="submit">
+     </li>
+    </ul>
+
+</form>
+</body>
+</html>

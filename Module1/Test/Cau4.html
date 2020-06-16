@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*let Employee= function(tendangnhap,tennhanvien,matkhau,ngaysinh,cnmd,gioitinh,diachi,sdt){
+        this.tendangnhap =tendangnhap;
+        this.tennhanvien =tennhanvien;
+        this.matkhau =matkhau;
+        this.ngaysinh =ngaysinh;
+        this.cmnd =cnmd;
+        this.gioitinh =gioitinh;
+        this.diachi =diachi;
+        this.sdt =sdt;
+        this.getTenDangNhap=function () {
+            return this.tendangnhap;
+        };
+        this.getTenNhanVien=function () {
+            return this.tennhanvien;
+        };
+        this.getMatKhau=function () {
+            return this.matkhau;
+        };
+        this.getNgaySinh=function () {
+            return this.ngaysinh;
+        };
+        this.getCmnd=function () {
+            return this.cmnd;
+        };
+        this.getGioiTinh=function () {
+            return this.gioitinh;
+        };
+        this.getDiaChi=function () {
+            return this.diachi;
+        };
+        this.getSdt=function () {
+            return this.sdt;
+        };
+        this.setTenDangNhap=function (tendangnhap) {
+            this.tendangnhap=tendangnhap;
+        };
+        this.setTenNhanVien=function (tennhanvien) {
+            this.tennhanvien=tennhanvien;
+        };
+        this.setMatKhau=function (matkhau) {
+            this.matkhau=matkhau;
+        };
+        this.setTenDangNhap=function (tendangnhap) {
+            this.tendangnhap=tendangnhap;
+        };
+        this.setTenDangNhap=function (tendangnhap) {
+            this.tendangnhap=tendangnhap;
+        };
+        this.setTenDangNhap=function (tendangnhap) {
+            this.tendangnhap=tendangnhap;
+        };
+        this.setTenDangNhap=function (tendangnhap) {
+            this.tendangnhap=tendangnhap;
+        };
+        this.setTenDangNhap=function (tendangnhap) {
+            this.tendangnhap=tendangnhap;
+        };
+    };*/
+
+    let tendanghap;
+    let tennhanvien;
+    let matkhau;
+    let ngaysinh;
+    let cmnd;
+    let gioitinh;
+    let diachi;
+    let sdt;
+
+    danghap=prompt("Nhap Ten dang nhap: ");
+    nhanvien=prompt("Nhap Ten nhan vien ");
+    matkhau=prompt("Nhap Mat khau: ");
+    ngaysinh=prompt("Nhap Ngay sinh: ");
+    cmnd=prompt("Nhap CMND: ");
+    gioitinh=prompt("Nhap Gioi tinh: ");
+    diachi=prompt("Nhap Dia chi: ");
+    sdt=prompt("Nhap So dien thoai: ");
+
+    let choose= parseInt(prompt("1.Hien thi thong tin Employee"+"\n"+
+        "2.Thuc hien kiem tra ngay sinh"));
+    switch (choose){
+        case 1: {
+            alert("Ten dang nhap: "+ danghap +"\n"+
+                "Ten nhan vien: "+ nhanvien +"\n"+
+                "Mat khau: "+ matkhau +"\n"+
+                "Ngay sinh: "+ngaysinh+"\n"+
+                "CMND : "+cmnd+"\n"+
+                "Gioi tinh:"+ gioitinh+"\n"+
+                "Dia chi: "+ diachi+"\n"+
+                "So dien thoai :"+sdt+"\n";
+            break;
+        }
+        /*case 2:{
+            let chooseEdit =parseInt(prompt("1.Dang nhap: "+ danghap +"\n"+
+                "2.Nhan vien: "+ nhanvien +"\n"+
+                "3.Mat khau: "+ matkhau +"\n"+
+                "4.Ngay sinh: "+ngaysinh+"\n"+
+                "5.CMND: "+cmnd+"\n"+
+                "6.Gioi tinh:"+ gioitinh+"\n"+
+                "7.Dia chi: "+ diachi+"\n"+
+                "8.So dien thoai:"+sdt+"\n"
+                ));
+            switch (chooseEdit) {
+                case 1 : {
+                    name=prompt("Enter name:");
+                    break;}
+                case 2 : {
+                    cmnd=prompt("Enter cmnd:");
+                    break;}
+                default:{
+                    alert("Failed");
+                }
+            }
+            alert("Ten: "+ name +"\n"+
+                "Cmnd: "+ cmnd +"\n"+
+                "Ngay sinh: "+ birthday +"\n"+
+                "Email: "+email+"\n"+
+                "Dia chi: "+address+"\n"+
+                "Loai dich vu:"+ typeService+"\n"+
+                "Loai phong: "+ typeRoom+"\n"+
+                "Loai khach hang :"+typeCustomer+"\n"+
+                "Giam gia: "+discount+"\n"+
+                "So luong di kem: "+quantityIncluded+"\n"+
+                "So ngay :" +renDays);
+            break;
+        }
+        default:{
+            alert("Su lua chon cua ban khong co trong trinh don")
+        }
+        case 3 :{
+            let money =0;
+            if (typeService==="Villa"){
+                money= 500;
+            } else if(typeService==="House"){
+                money= 300;
+            }else  if(typeService==="Room"){
+                money= 100;
+            }
+            let temp = 0;
+            if (address==="Da Nang"){
+                temp+=20;
+            }else if(address==="Hue"){
+                temp+=10;
+            }else  if(address==="Quang Nam"){
+                temp+=5;
+            }
+            if (renDays>7){
+                temp +=30;
+            }else if(renDays>5){
+                temp +=20;
+            }else if(renDays>2){
+                temp+=10;
+            }
+            if(typeCustomer==="Diamond"){
+                temp+=15;
+            }else if(typeCustomer==="Platium"){
+                temp+=10;
+            }else if (typeCustomer==="Gold"){
+                temp+=5;
+            }else if (typeCustomer==="Silver"){
+                temp+=2;
+            }else if(typeCustomer==="Member"){
+                temp+=0;
+            }
+            alert("Total pay: "+(money*renDays-temp));
+            break;
+        }*/
+    }
+
+</script>
+</body>
+</html>

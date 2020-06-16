@@ -6,12 +6,29 @@
 </head>
 <body>
 <script>
-    let n =prompt('Nhap vao mot so bat ky');
-    alert("So "+ n +" la so nguyen to ? "+ktraSoNguyenTo(n));
-    function ktraSoNguyenTo(n) {
-        // let check =true;
-        for (let i=2; i<n ;i++){
-            if(n % i ==0){
+    /* let n =prompt('Nhap vao mot so bat ky');
+     alert("So "+ n +" la so nguyen to ? "+ktraSoNguyenTo(n));
+     function ktraSoNguyenTo(n) {
+         // let check =true;
+         for (let i=2; i<n ;i++){
+             if(n % i ==0){
+                 return false;
+             }
+         }
+         return true;
+     }*/
+
+    let sout = '';
+    for (let i = 2; i < 1000; i++) {
+        if (isPrime(i)) {
+            sout += i + "-";
+        }
+    }
+    alert('so nguyen to la :' + sout);
+
+    function isPrime(x) {
+        for (let i = 2; i < x; i++) {
+            if (x % i == 0) {
                 return false;
             }
         }

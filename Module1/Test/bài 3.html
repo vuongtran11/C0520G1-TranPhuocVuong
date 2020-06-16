@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài kiểm tra 3</title>
+</head>
+<body>
+<script>
+    /*let regexemail = /\S{5}[.@-]\S+\.\S+/;
+    function checkEmail() {
+        let emai;// = prompt('Nhập email của bạn');
+            emai = prompt("Nhập vào email của bạn");
+            if (regexemail.test(emai)){
+                for (let i =0;i<emai.length;i++){
+                    if (emai.charAt(i)==='@'){
+                        alert(emai.substring(0,i));
+                        // break;
+                    }
+                }
+                // checkEmail();
+                // alert(emai.substring(0,6));
+            }else {
+                alert('sai định dạng email');
+                checkEmail();
+            }
+    }
+    checkEmail();*/
+
+    let regexEmail = /^\w+@\w+\.\w+$/;                      /*w có nghĩa là chữ cái hoặc số         abc@gmail.com*/
+    let checkValid = false;
+    let email;
+    do {
+        email = prompt('Input email:');
+        if (regexEmail.test(email)) {
+            checkValid = true;
+        } else {
+            alert('Invalid email. Please try again.');
+        }
+    } while (!checkValid);
+    checkValid =false;
+    alert('Hello ' + email);
+
+</script>
+</body>
+</html>

@@ -7,15 +7,20 @@
 <body>
 <script>
     function checkPositive(num) {
-        if (num>=0) {return true;}
-        else return false;
+        if (num >= 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
-    let num = prompt('Nhập vào số :')*1;
+
+    let num = prompt('Nhập vào số :') * 1;
     if (checkPositive(num)) {
-        alert('Đây là số nguyên dương');
+        alert('Đây là true');
     } else {
-        alert('Đây là số nguyên âm');
+        alert('Đây là false');
     }
+
 </script>
 </body>
 </html>

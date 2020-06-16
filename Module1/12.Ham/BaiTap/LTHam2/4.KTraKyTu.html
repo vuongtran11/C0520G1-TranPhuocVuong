@@ -6,12 +6,18 @@
 </head>
 <body>
 <script>
+    let num = prompt('Nhap vao ky tu bat ky:') * 1;
+
     function checkNum(num) {
         return Number.isNaN(num);
     }
-    let num = prompt('Nhập vào:')*1;
-    if (!checkNum(num)) { alert('Đây là một số');}
-    else { alert('Đây không phải là số');}
+
+    if (!checkNum(num)) {
+        alert('Đây là một số');
+    } else {
+        alert('Đây không phải là số');
+    }
+
 </script>
 </body>
 </html>

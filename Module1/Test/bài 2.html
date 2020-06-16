@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài kiểm tra 2</title>
+</head>
+<body>
+<script>
+    let num = prompt('Nhập vào 1 số có 4 chử số');
+    let arr = num.split('');
+
+    function isNumber(a) {
+        let check1 = false;
+        if (a[0] == (a[2] - a[3])) {
+            return check1 = true;
+        } else {
+            return check1 = false;
+        }
+    }
+
+    // document.write(isNumber(arr));
+    alert(isNumber(arr));
+</script>
+</body>
+</html>

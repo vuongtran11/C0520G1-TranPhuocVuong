@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài kiểm tra 1</title>
+</head>
+<body>
+
+</body>
+<script>
+    let num = prompt("Nhap vao so nguyen") * 1;
+    let array = new Array();
+    while (num <= 6) {
+        alert("Nhập lại số bất kì lớn hơn 6");
+        num = prompt('Nhập lại số bất kì lớn hơn 6');
+    }
+    for (let i=0; array.length < num;) {
+        i = prompt("Nhập phần tử cho mảng");
+        array.push(i)
+    }
+    alert(array);
+    alert(array.sort(function (a,b) {
+        return b-a;}
+        ));
+
+</script>
+</html>

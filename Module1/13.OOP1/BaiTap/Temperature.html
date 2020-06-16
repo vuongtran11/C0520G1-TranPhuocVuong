@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    /*function Temperature(temp) {
+        this.temp = temp;
+        this.celsiustoFahrenheit = function () {
+            return ((this.temp * 9) / 5) + 32;
+        };
+        this.celsiustoKenvin = function () {
+            return (this.temp + 273.15);
+        }
+    }
+
+    let temp = parseFloat(prompt("Nhập độ C: "));
+    let a = new Temperature(temp);
+    let b = a.celsiustoFahrenheit();
+    let c = a.celsiustoKenvin();
+    alert("Độ C: " + temp +
+        "\nĐộ F: " + b +
+        "\nĐộ K: " + c);*/
+
+    //============Class==========
+    class Temperature {
+        constructor(temp) {
+            this.temp = temp;
+        }
+        celsiustoFahrenheit() {
+            return ((this.temp * 9) / 5) + 32;
+        }
+        celsiustoKenvin() {
+            return (this.temp + 273.15);
+        }
+    }
+
+    let temp = parseFloat(prompt("Nhập độ C: "));
+    let a = new Temperature(temp);
+    let b = a.celsiustoFahrenheit();
+    let c = a.celsiustoKenvin();
+    alert("Độ C: " + temp +
+        "\nĐộ F: " + b +
+        "\nĐộ K: " + c);
+
+</script>
+</body>
+</html>

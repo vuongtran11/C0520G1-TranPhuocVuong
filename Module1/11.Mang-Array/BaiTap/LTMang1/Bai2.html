@@ -7,33 +7,35 @@
 <body>
 <script>
     //==========C1============
-  /*  let a = [1, 2, 4, 6, 7, 9, 11,12];
+    /*let a = [1, 2, 4, 6, 7, 9, 11, 12];
     let max = a[0];
+    let index = 0;
     for (let i = 1; i < a.length; i++) {
         if (a[i] > max) {
             max = a[i];
+            index = i;
         }
     }
-    document.write('So max la: '+ max);*/
+    document.write('So max la: ' + max + ' Tai vi tri: ' + index);*/
 
-    let a= new Array(10);
-    let count= 0;
-    let temp;
-    while(count<10){
-        let b = parseInt(prompt("Nhập vào phần tử của mảng: "));
-        a[count]=b;
-        count++;
-    }
+     let a= new Array(10);
+     let count= 0;
+     let temp;
+     while(count<10){
+         let b = parseInt(prompt("Nhập vào phần tử của mảng: "));
+         a[count]=b;
+         count++;
+     }
 
-    let max = a[0];
-    for(let i= 1;i<a.length;i++){
-        if(max<a[i]){
-            max = a[i];
-            temp =i;
-        }
-    }
+     let max = a[0];
+     for(let i= 1;i<a.length;i++){
+         if(max<a[i]){
+             max = a[i];
+             temp =i;
+         }
+     }
 
-    document.write("Giá trị lớn nhất trong mảng là: "+max+", tại vị trí: "+temp);
+     document.write("Giá trị lớn nhất trong mảng là: "+max+", tại vị trí: "+temp);
 
 </script>
 </body>
