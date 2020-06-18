@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baitap</title>
+</head>
+<body>
+<!--<script B1-Tb chia het cho 3 trong mang>
+    let n;
+    let arr = [];
+    let ele;
+    let check;
+    let i = 0;
+    let sum, average, divideThree;
+    let regExp = /^\d+$/;
+    while (true) {
+        n = prompt("Input an Number of element in Array");
+        if (n > 0 && n <= 50) {
+            if (regExp.test(n)) {
+                while (i < n) {
+                    ele = parseInt(prompt("Input elements"));
+                    if (isNaN(ele))
+                        alert("this element is not a number");
+                    else {
+                        arr.push(ele);
+                        i++;
+                    }
+                }
+                alert(arr);
+                break;
+            } else {
+                alert("The Number is not valid");
+            }
+        } else {
+            alert(`Length of array must be between 0 and 50`)
+        }
+    }
+    divideThree = arr.filter(val => val % 3 == 0);
+    if (divideThree.length != 0) {
+        sum = divideThree.reduce((num, val) => num + val);
+        average = sum / divideThree.length;
+        alert(average);
+    }
+</script>-->
+
+<!--<script B2-So hoan hao>
+    let inNum;
+    let regExp = /^\d+$/;
+    let check;
+    while (true) {
+        inNum = prompt("Input an positive number");
+        if (regExp.test(inNum)) {
+            inNum = parseInt(inNum);
+            break;
+        } else {
+            alert("The Number is not valid");
+        }
+    }
+    check = perfectNumber(inNum);
+    if (check)
+        alert(`${inNum} is a perfect number`);
+    else
+        alert(`${inNum} is not a perfect number`);
+    function perfectNumber(num) {
+        let sum = 0;
+        for (let i = 1; i <= num / 2; i++) {
+            if (num % i === 0)
+                sum += i;
+        }
+        if (sum === num)
+            return true;
+        return false;
+    }
+</script>-->
+
+<!--<script-B3 Nhap ngay thang nam >
+    let inDate, tempDate;
+    let secondate;
+    let days;
+    let arrDate = [];
+    while (1) {
+        inDate = prompt("Input a Date");
+        if (checkDate(inDate)) {
+            arrDate = inDate.split('/');
+            date2 = new Date(arrDate[2], arrDate[1] - 1, arrDate[0]);
+            alert(date2);
+            alert(printDays(date2) + 1);
+            break;
+        }
+    }
+    function printDays(secondDate) {
+        const first = new Date(2020, 0, 1);
+        let days = secondDate.getTime() - first.getTime();
+        return days / 1000 / 60 / 60 / 24;
+    }
+    function checkDate(dates) {
+        let temp;
+        if (!dates.length) return false;
+        let date = dates.split('/');
+        if (date.length != 3)
+            return false;
+        for (let i = 0; i < date.length; i++) {
+            temp = parseInt(date[i]);
+            if (isNaN(temp))
+                return false;
+            switch (i) {
+                case 0:
+                    if (temp < 0 || temp > 31) {
+                        return false
+                    }
+                    break;
+                case 1:
+                    if (temp < 0 || temp > 12) {
+                        return false
+                    }
+                    break;
+                case 2:
+                    if (temp < 0) {
+                        return false
+                    }
+            }
+        }
+        return true;
+    }
+</script->-->
+<h2>Add New Employee</h2>
+<div>
+    <button onclick="addNew()">Add new employee</button>
+    <button onclick="del()">Delete Employee</button>
+</div>
+<h3>Display all Employee.</h3>
+<table id="employeetbl">
+    <script src="cau4.js"></script>
+    <script>
+        let employeeTableHtml = document.getElementById("employeetbl");
+        let emailRegExp = /^[-\w]+@([-\w]+\.)+[\w-]+$/;
+        let idRegExp = /^\d+$/;
+        let dobRegExp = /^((01)|([0-2][2-9])|([1-3][01]))\/((0[1-9])|(1[0-2]))\/(\d{4})$/;
+        let positiveNumRegExp = /^\d+$/;
+        let test = new Employee(1, 'Ngyen', '15/04/1996', 'da nang', '2000', 'manager')
+        let test1 = new Employee(2, 'Duy', '15/04/1996', 'hue', '2000', 'director')
+        let listEmployee = [test, test1];
+        updateEmployee();
+        function sortName(arr) {
+            arr.sort((a, b) => {
+                if(a.name > b.name)
+                    return 1;
+                else if (a.name < b.name)
+                    return -1;
+                else
+                    return 0;
+            });
+        }
+        function updateEmployee() {
+            let employeeCount = listEmployee.length;
+            let employeeTable = "";
+            sortName(listEmployee);
+            employeeTable += "<tr><th>Id</th><th>Name</th><th>Birth day</th><th>Address</th><th>Salary</th><th>Position</th></tr>";
+            for (let i = 0; i < employeeCount; i++) {
+                employeeTable += "<tr>"
+                employeeTable += "<td>" + listEmployee[i].id + "</td>";
+                employeeTable += "<td>" + listEmployee[i].name + "</td>";
+                employeeTable += "<td>" + listEmployee[i].dob + "</td>";
+                employeeTable += "<td>" + listEmployee[i].addr + "</td>";
+                employeeTable += "<td>" + listEmployee[i].salary + "</td>";
+                employeeTable += "<td>" + listEmployee[i].position + "</td></tr>";
+            }
+            employeeTableHtml.innerHTML = employeeTable;
+        }
+        function addNew() {
+            let id = SetInfomation("Employee ID", "Employee ID is invalid.", idRegExp);
+            let name = prompt("Employee Name");
+            name = fomatValue(name);
+            let dob = SetInfomation("Employee Birthday", "Employee birthday is invalid.", dobRegExp);
+            let addr = prompt("Employee Address");
+            let salary = SetInfomation("Employee Salary", "Wrong number", /^\d+$/);
+            let pos = prompt("Employee Position");
+            let employee = new Employee(id, name, dob, addr, salary, pos);
+            listEmployee.push(employee);
+            updateEmployee();
+        }
+        function del() {
+            let listName = "";
+            listEmployee.forEach((value, index) => {listName += (index + 1) + "." + value.name + "\n";});
+            let namePos = parseInt(prompt("    Select option\n"+ listName));
+            let isConf = confirm("Do you want to delete?");
+            if (isConf) {
+                listEmployee.splice(namePos - 1, 1);
+            }
+            updateEmployee();
+        }
+        function checkValid(regExpType, strCheck) {
+            if (regExpType.test(strCheck)) {
+                return true;
+            }
+            return false;
+        }
+        function SetInfomation(strPromp, strAlert, regExp){
+            while(true) {
+                value  = prompt(strPromp);
+                if (checkValid(regExp, value)) {
+                    return value;
+                } else {
+                    alert(strAlert);
+                }
+            }
+        }
+        function fomatValue(value) {
+            let tempValue = "";
+            value = value.trim().toLowerCase();
+            let length = value.length;
+            for(let i = 0; i < length; i++) {
+                if (value[i] == ' ' && value[i + 1] == ' ') {
+                    continue;
+                }
+                if (i == 0 || value[i - 1] == ' ') {
+                    tempValue += value[i].toUpperCase();
+                    continue;
+                }
+                tempValue += value[i];
+            }
+            return tempValue;
+        }
+    </script>
+    class Employee {
+    constructor(id, name, dob, addr, salary, position) {
+    this.id = id;
+    this.name = name;
+    this.dob = dob;
+    this.addr = addr;
+    this.salary = salary;
+    this.position = position;
+    }
+    }
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CongTacVsBongDen</title>
+</head>
+<body>
+<script>
+    class SwitchButton {
+        constructor() {
+            this.status = false;
+        }
+        connectToLamp(lamp) {
+            this.lamp= lamp;
+           if(this.status){
+               this.lamp.turnOn()
+           }else {
+               this.lamp.turnOff()
+           }
+        }
+        switchOff() {
+            this.status=false;
+                    }
+        switchOn() {
+            this.status=true
+                   }
+    }
+    class Lamp {
+        constructor() {
+        this.status = false;
+        }
+        turnOff(){
+           this.status=false;
+        }
+        turnOn(){
+            this.status=true;
+        }
+    }
+    let lamp = new Lamp();
+    let switchBooton = new SwitchButton();
+    let n=0;
+    while (n<4){
+        switchBooton.switchOn();
+        switchBooton.connectToLamp(lamp);
+        alert(" tinh trang bong den:  "+ lamp.status);
+        switchBooton.switchOff();
+        switchBooton.connectToLamp(lamp);
+        alert(" tinh trang bong den : "+ lamp.status);
+        n++
+    }
+
+</script>
+</body>
+</html>

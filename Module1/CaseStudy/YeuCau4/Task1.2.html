@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC4.Task1.2</title>
+</head>
+<body>
+<script>
+    let arrNameCustomer=[];
+    while (true) {
+    let choose=parseInt(prompt("1.Add new Customer"+"\n"+"2.Delete Customer"));
+    switch (choose) {
+        case 1:{
+            let number= parseInt(prompt("Enter number customer you want add to array."));
+            for(let i=0;i<number;i++) {
+                let nameCustomer=prompt("Enter name of Customer:");
+                arrNameCustomer.push(nameCustomer);
+            }
+            let result="";
+            arrNameCustomer.sort();
+            // arrNameCustomer.reverse(); Sap xep dao nguoc
+            for(let i=0;i<arrNameCustomer.length;i++){
+                result+=(i+1)+". "+arrNameCustomer[i]+"\n";
+            }
+            alert(result);
+            break;
+        }
+        case 2:{
+            let check= false;
+            let nameCustomer =prompt("Enter customer you want delete: ");
+            for (let i=0;i<arrNameCustomer.length;i++){
+                if(arrNameCustomer[i] === nameCustomer ){
+                    arrNameCustomer.splice(i,1);
+                    check=true;
+                }
+            }
+            if(!check){
+                alert("Ten ban muon xoa khong co trong mang")
+            }
+             let result="";
+             arrNameCustomer.sort();
+             for(let i=0;i<arrNameCustomer.length;i++){
+               result+=(i+1)+". "+arrNameCustomer[i]+"\n";
+            }
+             alert(result);
+             break;
+         }
+        default:{
+            alert("Failed");
+        }
+    }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KTThangNam</title>
+</head>
+<body>
+<script>
+    let month = parseInt(prompt('nhap so thang'));
+    let year = parseInt(prompt('Nhap so nam'));
+    findDayNumberInMonth(month,year);
+    function findDayNumberInMonth(m,y) {
+        switch (m) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert('Thang '+ m +'co 31 ngay');
+                break;
+            case 2:
+                if (kiemTraNamNhuan(y)){
+                    alert('Thang '+ m +' co 29 ngay');
+                }else {
+                    alert('Thang '+ m +' co 28');
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert('Thang '+ m +' co 30 ngay');
+        }
+    }
+    function kiemTraNamNhuan(year) {
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    return true;
+                } else {
+                    return  false;
+                }
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

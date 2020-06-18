@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a= prompt('Nhap gia tri a: ');
+    let b= prompt('Nhap gia tri b : ');
+    /*function UCLN(x,y) {
+        while (x != y){
+            if(x>y){
+                x=x-y;
+            }else y=y-x;
+        }
+        return x;
+    }
+    document.write('Uoc chung lon nhat : '+ UCLN(a,b));
+    document.write('Boi chung nho nhat : '+ a*b/UCLN(a,b));*/
+    arr = [];
+    for(let i=0;i<=a;i++){
+        if(a%i==0 && b%i==0){
+            arr.push(i);
+        }
+    }
+    let uocChunglonNhat = arr[arr.length-1];
+    let boiChungnhoNhat = (a*b)/uocChunglonNhat;
+    document.write('Uoc chung lon nhat : '+ uocChunglonNhat+'<br>');
+    document.write('Boi chung nho nhat : '+ boiChungnhoNhat );
+</script>
+</body>
+</html>

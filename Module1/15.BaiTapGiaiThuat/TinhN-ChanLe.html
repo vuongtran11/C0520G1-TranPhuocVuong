@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n= parseInt(prompt('Nhap vao mot so :'));
+    function chan(n){
+        let tong = 1;
+        for(let i=1;i<= n;i++){
+            if (i%2==0){
+                tong*=i;
+            }
+        }
+    return tong;
+    }
+    function le(n){
+        let tong =1;
+        for (let i=1; i<= n;i++){
+            if(i%2 !=0){
+                tong*=i;
+            }
+        }
+        return tong;
+    }
+
+    if(n%2==0){
+        alert(chan(n));
+    }else if(n%2!=0){
+        alert(le(n));
+    }
+    // let tong = 1;
+    // for(i=1;i<= n;i++){
+    //     if (i%2==0){
+    //         tong*=i;
+    //     }
+    //
+    // }
+    // alert('tong la:' +tong);
+
+
+    // let tong =1;
+    // for (i=1; i<= n;i++){
+    //     if(i%2 !=0){
+    //         tong*=i;
+    //     }
+    // }
+    // alert('tong la : '+tong);
+</script>
+</body>
+</html>

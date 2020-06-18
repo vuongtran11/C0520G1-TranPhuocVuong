@@ -10,11 +10,13 @@
     let array = new Array();
     let str = "";
     let result = document.getElementById("result");
-    for (let i=0;i<10;i++) {
-        array[i] = Math.round(Math.random()*20);
+    for (let i = 0; i < 10; i++) {
+        array[i] = Math.round(Math.random() * 20);
     }
     str = array.join(",");
-    array = array.sort(function (a,b) { return a-b; })
+    array = array.sort(function (a, b) {
+        return a - b;
+    });
     str += "<br> Sắp Xếp Mảng:";
     str += array.join(",");
     result.innerHTML = str;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = prompt('Nhap vao chuoi so : ');
+    // let s=parseInt(m[0])+parseInt(m[1])+parseInt(m[2]);
+    let s=0;
+    for(let i=0;i<m.length;i++){
+        s+=(parseInt(m[i]));
+        console.log(s)
+    }
+    alert('Tong la : '+ s);
+
+    // let p=parseInt(m[0])*parseInt(m[1])*parseInt(m[2]);
+    let p=1;
+    for(let i=0;i<m.length;i++){
+        p*=(parseInt(m[i]));
+        console.log(p)
+    }
+    alert('Tich la : '+ p);
+</script>
+</body>
+</html>
