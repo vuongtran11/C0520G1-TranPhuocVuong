@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="tex" id="tenSanPham">
+<input type="button" value="Thêm sản phẩm" onclick="themSanPham()"><br>
+<div>
+    <label style="float: left; margin-right: 40px">Số lượng sản phẩm </label>
+    <p id="soLuong"></p>
+</div>
+<p id="hienThi"></p>
+<script>
+
+    let listSanPham = ['Sam Sung', 'Iphone', 'Nokia'];
+    hienThi();
+
+    function themSanPham() {
+        let tenSanPham = document.getElementById("tenSanPham").value;
+        if (tenSanPham === '') {
+            alert("Vui lòng nhập tên sản phẩm")
+        } else {
+            listSanPham.push(tenSanPham);
+            document.getElementById("tenSanPham").value = "";
+        }
+        hienThi();
+    }
+
+    function hienThi() {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Số thứ tự</th>\n' +
+            '        <th>Tên sản phẩm</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < listSanPham.length; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + listSanPham[i] + '</td>\n' +
+                '        <td><input type="button" value="Sửa" onclick="suaThongTinSanPham(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Xóa" onclick="xoaSanPham(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("hienThi").innerHTML = tableString;
+        document.getElementById("soLuong").innerHTML = listSanPham.length;
+    }
+
+    function suaThongTinSanPham(id) {
+        let tenSanPhamMoi = prompt("Đổi lại tên Sản phẩm");
+        if (tenSanPhamMoi == '') {
+            alert("Làm ơn nhập tên sản phẩm cần sửa")
+        } else if (tenSanPhamMoi == null) {
+            alert(" Bạn không muốn đổi tên sản phẩm")
+        } else {
+            listSanPham[id] = tenSanPhamMoi;
+        }
+        hienThi();
+    }
+
+    function xoaSanPham(id) {
+        let kiemTraXoa = confirm("Bạn có muốn xóa sản phẩm " + listSanPham[id]);
+        if (kiemTraXoa) {
+            listSanPham.splice(id, 1);
+        } else {
+            alert("Bạn không muốn xóa sản phẩm " + listSanPham[id])
+        }
+        hienThi();
+    }
+</script>
+</body>
+</html>

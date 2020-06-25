@@ -5,6 +5,24 @@
     <title>Baitap</title>
 </head>
 <body>
+    //=========C1=============//
+    let n;
+    do{
+    n = prompt("Nhap vao so phan tu cua mang: ");
+    }while (isNaN(n) || n <= 50);
+    let array = new Array(n);
+    let sum = 0;
+    let dem = 0;
+    for (let i = 0; i < n; i++) {
+    array[i] = parseInt(prompt("Nhap vao phan tu thu " + i));
+    if (array[i] % 3 == 0) {
+    sum += array[i];
+    dem++;
+    }
+    }
+    let trungbinh = sum/dem;
+    alert(trungbinh);
+
 <!--<script B1-Tb chia het cho 3 trong mang>
     let n;
     let arr = [];

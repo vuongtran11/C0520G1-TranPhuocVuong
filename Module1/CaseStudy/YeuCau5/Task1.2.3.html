@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YC5.Task123</title>
+</head>
+<body>
+<script>
+    let arrListCustomer = [];
+
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1.Add nesw Customer" + "\n2.Display InformationCustomer"
+            + "\n3.Edit Information Customer" + "\n4.Delete customer" + "\n5.Exit"));
+        switch (choose) {
+            case 1: {
+                addNewCustomer();
+                break;
+            }
+            case 2: {
+                displayCustomer();
+                break;
+            }
+            case 3: {
+                editCustomer();
+                break;
+            }
+            case 4: {
+                deleteCustomer();
+                break;
+            }
+            case 5: {
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+    }
+
+    function deleteCustomer() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            temp += i + ". Name: " + arrListCustomer[i][0] + "\n";
+        }
+        let chooseDelete = parseInt(prompt(temp));
+        let check = parseInt(prompt('Are you want delete Customer.' + '\n1.Yes  2.No'));
+        if (check === 1) {
+            arrListCustomer.splice(chooseDelete, 1);
+            alert('Ban da xoa thanh cong.')
+        } else {
+            alert('Cancel');
+        }
+        displayMainMenu();
+    }
+
+    function editCustomer() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            temp += i + ". Name: " + arrListCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        let chooseEdit = parseInt(prompt("1.Ten: " + arrListCustomer[chooseDisplay][0] + "\n" +
+            "2.Cmnd: " + arrListCustomer[chooseDisplay][1] + "\n" +
+            "3.Ngay sinh: " + arrListCustomer[chooseDisplay][2] + "\n" +
+            "4.Email: " + arrListCustomer[chooseDisplay][3] + "\n" +
+            "5.Dia chi: " + arrListCustomer[chooseDisplay][4] + "\n" +
+            "6.Loai dich vu:" + arrListCustomer[chooseDisplay][5] + "\n" +
+            "7.Loai phong: " + arrListCustomer[chooseDisplay][6] + "\n" +
+            "8.Loai khach hang :" + arrListCustomer[chooseDisplay][7] + "\n" +
+            "9.Giam gia: " + arrListCustomer[chooseDisplay][8] + "\n" +
+            "10.So luong di kem: " + arrListCustomer[chooseDisplay][9] + "\n" +
+            "11.So ngay :" + arrListCustomer[chooseDisplay][10]));
+        switch (chooseEdit) {
+            case 1 : {
+                arrListCustomer[chooseDisplay][0] = prompt("Enter name:");
+                break;
+            }
+            case 2 : {
+                arrListCustomer[chooseDisplay][1] = prompt("Enter cmnd:");
+                break;
+            }
+            case 3 : {
+                arrListCustomer[chooseDisplay][2] = prompt("Enter birthday:");
+                break;
+            }
+            case 4 : {
+                arrListCustomer[chooseDisplay][3] = prompt("Enter email:");
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+        editCustomer();
+    }
+
+    function displayCustomer() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            temp += i + ". Name: " + arrListCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert("Ten: " + arrListCustomer[chooseDisplay][0] + "\n" +
+            "Cmnd: " + arrListCustomer[chooseDisplay][1] + "\n" +
+            "Ngay sinh: " + arrListCustomer[chooseDisplay][2] + "\n" +
+            "Email: " + arrListCustomer[chooseDisplay][3] + "\n" +
+            "Dia chi: " + arrListCustomer[chooseDisplay][4] + "\n" +
+            "Loai dich vu:" + arrListCustomer[chooseDisplay][5] + "\n" +
+            "Loai phong: " + arrListCustomer[chooseDisplay][6] + "\n" +
+            "Loai khach hang :" + arrListCustomer[chooseDisplay][7] + "\n" +
+            "Giam gia: " + arrListCustomer[chooseDisplay][8] + "\n" +
+            "So luong di kem: " + arrListCustomer[chooseDisplay][9] + "\n" +
+            "So ngay :" + arrListCustomer[chooseDisplay][10]);
+        displayMainMenu();
+    }
+
+    function addNewCustomer() {
+        let cusInfo = [];
+        let name = prompt("Input name: ");
+        let cmnd = prompt("Input cmnd ");
+        let birthday = prompt("Input birthday: ");
+        let email = prompt("Input email: ");
+        let address = prompt("Input address: ");
+        let typeService = prompt("Input type service: ");
+        let typeRoom = prompt("Input type room: ");
+        let typeCustomer = prompt("Input type Customer ");
+        let discount = prompt("Input discount: ");
+        let quantityIncluded = prompt("Input quantityIncluded: ");
+        let renDays = prompt("Input rendays: ");
+        cusInfo.push(name);
+        cusInfo.push(cmnd);
+        cusInfo.push(birthday);
+        cusInfo.push(email);
+        cusInfo.push(address);
+        cusInfo.push(typeService);
+        cusInfo.push(typeRoom);
+        cusInfo.push(typeCustomer);
+        cusInfo.push(discount);
+        cusInfo.push(quantityIncluded);
+        cusInfo.push(renDays);
+
+        arrListCustomer.push(cusInfo);
+        alert("Ban da them thanh cong");
+        displayMainMenu();
+    }
+
+    displayMainMenu();
+</script>
+</body>
+</html>

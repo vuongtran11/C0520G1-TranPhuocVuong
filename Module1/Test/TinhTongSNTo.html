@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt('Nhap vao so luong trong mang:'));
+    let arr = new Array(num);
+    for (let i = 0; i < num; i++) {
+        arr[i] = parseInt(prompt('Nhap phan tu thu ' + i));
+    }
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (isPrime(arr[i])) {
+            sum += arr[i];
+        }
+    }
+    alert(sum);
+
+    function isPrime(num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    alert(isPrime(1))
+
+</script>
+</body>
+</html>

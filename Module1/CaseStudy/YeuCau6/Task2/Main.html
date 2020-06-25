@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="Employee.js"></script>
+    <title>YC6</title>
+</head>
+<body>
+<script>
+    let listEmployee=[];
+    function displayMainMenu() {
+        let choose=parseInt(prompt('1.Add new Employee.'+'\n2.Display infomation Employee.'+'\n3.Salary of Employee.'+'\n4.Exit'));
+        switch (choose) {
+            case 1 :{
+                addNewEmployee();
+                break;
+            }
+            case 2 :{
+                displayInfomation();
+                break;
+            }
+            case 3 :{
+                displaySalary();
+                break;
+            }
+            default:{
+                alert('Failed'); 
+            }
+        }
+    }
+    function displaySalary() {
+        let result ='';
+        for(let i=0; i<listEmployee.length;i++){
+            result+=i+'.Name: '+listEmployee[i].getName()+'\n';
+        }
+        let chooseDisplay=parseInt(prompt(result));
+        alert('Luong cua nhan vien: '+listEmployee[chooseDisplay].getName()+' la: '+listEmployee[chooseDisplay].getSalary());
+        displayMainMenu();
+    }
+    function displayInfomation() {
+        let result ='';
+        for(let i=0; i<listEmployee.length;i++){
+         result+=i+'.Name: '+listEmployee[i].getName()+'\n';
+        }
+        let chooseDisplay=parseInt(prompt(result));
+        alert('Ten :'+listEmployee[chooseDisplay].getName()+'\n'
+            +'Ngay sinh :'+listEmployee[chooseDisplay].getBirthday()+'\n'
+            +'Email :'+listEmployee[chooseDisplay].getEmail()+'\n'
+            +'Cmnd :'+listEmployee[chooseDisplay].getCmnd()+'\n'
+            +'Vi tri :'+listEmployee[chooseDisplay].getLocation()+'\n'
+            +'Trinh do :'+listEmployee[chooseDisplay].getLevel());
+        displayMainMenu()
+    }
+    function addNewEmployee() {
+        let employee= new Employee();
+        employee.setName(prompt('Enter Name: '));
+        employee.setBirthday(prompt('Enter Birthday: '));
+        employee.setEmail(prompt('Enter Email: '));
+        employee.setPhone(prompt('Enter Phone: '));
+        employee.setCmnd(prompt('Enter Cmnd: '));
+        employee.setLevel(prompt('Enter Level: '));
+        employee.setLocation(prompt('Enter Location: '));
+        listEmployee.push(employee);
+        alert('Ban da them thanh cong employee');
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let count = 0;
+    let sum = 0;
+    let avg = 0;
+    let count1 = 0;
+    while (count < 5) {
+        let temp = parseInt(prompt('Nhap vao mang:'));
+        array[count] = temp;
+        count++;
+    }
+    document.write('Cac so da nhap : ' + array);
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 3 == 0) {
+            sum += array[i];
+            count1++;
+        }
+        avg = sum / count1;
+    }
+    document.write('\nTong cac so chia het cho 3 la: ' + sum);
+    document.write('\nTB cac so chia het cho 3 la: ' + avg);
+
+</script>
+</body>
+</html>

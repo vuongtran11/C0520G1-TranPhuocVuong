@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Sach {
+        constructor(tensach, loaisach, sotrang, gia) {
+            this.tensach = tensach;
+            this.loaisach = loaisach;
+            this.sotrang = sotrang;
+            this.gia = gia;
+        }
+        setTenSach(tensach) {
+            this.tensach = tensach;
+        }
+        setLoaiSach(loaisach) {
+            this.loaisach = loaisach;
+        }
+        setSoTrang(sotrang) {
+            this.sotrang = sotrang;
+        }
+        setGia(gia) {
+            this.gia = gia;
+        }
+        getTenSach() {
+            return this.tensach;
+        }
+        getLoaiSach() {
+            return this.loaisach;
+        }
+        getSoTrang() {
+            return this.sotrang;
+        }
+        getGia() {
+            return this.gia;
+        }
+    }
+    let ten =prompt("ten");
+    let loai =prompt("loai");
+    let trang =prompt("trang");
+    let gia =prompt("gia");
+
+    let sach1 = new Sach(ten, loai, trang, gia);
+    alert(sach1.tensach+'\n'+sach1.loaisach+'\n'+sach1.sotrang+'\n'+sach1.gia);
+    let sach2 = new Sach('Ly', 'GK', 91, 51);
+    alert(sach2.tensach+'\n'+sach2.loaisach+'\n'+sach2.sotrang+'\n'+sach2.gia);
+    let sach3 = new Sach('Hoa', 'GK', 92, 52);
+    alert(sach3.tensach+'\n'+sach3.loaisach+'\n'+sach3.sotrang+'\n'+sach3.gia);
+
+    let arr=[];
+    let temp='';
+    arr.push(sach1);
+    arr.push(sach2);
+    arr.push(sach3);
+    for(let i=0;i<arr.length;i++){
+        temp += i+" .Ten: "+arr[i].getTenSach()+" Loai: "+ arr[i].getLoaiSach();
+    }
+    alert(temp);
+    
+</script>
+</body>
+</html>

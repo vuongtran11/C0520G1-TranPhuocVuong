@@ -10,16 +10,32 @@
 <script>
     let num = prompt("Nhap vao so nguyen")*1;
     let array = new Array();
+    let result = document.getElementById("result");
+    for (let i=0;i<num;i++) {
+        array[i] = prompt('Nhap vao so :')*1;
+    }
+    alert(array);
+    let str = "";
+    str = array.join(",");
+    str += "<br>" + "Mảng đảo ngược là :<br>";
+    array.reverse();
+    str += array.join(",");
+    //document.write(result=str);
+    result.innerHTML = str;
+
+    /*let num = prompt("Nhap vao so nguyen")*1;
+    let array = new Array();
     let str = "";
     let result = document.getElementById("result");
     for (let i=0;i<num;i++) {
-        array[i] = Math.round(Math.random()*20);
+        array[i] = Math.round(Math.random()*20);        //random
     }
     str = array.join(",");
     str += "<br>" + "Mảng đảo ngược là :<br>";
     array.reverse();
     str += array.join(",");
-    result.innerHTML = str;
+    result.innerHTML = str;*/
+
 </script>
 </body>
 </html>

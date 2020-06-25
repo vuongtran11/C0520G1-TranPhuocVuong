@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class CongNhan {
+        constructor(stt, hoVaTen, ngaySinh, diaChi, luong, chucVu) {
+            this.stt = stt;
+            this.hoVaTen = hoVaTen;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+        setStt(stt) {
+            this.stt = stt;
+        }
+        setHoVaTen(hoVaTen) {
+            this.hoVaTen = hoVaTen;
+        }
+        setNgaySinh(ngaySinh) {
+            this.ngaySinh = ngaySinh;
+        }
+        setDiaChi(diaChi) {
+            this.diaChi = diaChi;
+        }
+        setLuong(luong) {
+            this.luong = luong;
+        }
+
+        setChucVu(chucVu) {
+            this.chucVu = chucVu;
+        }
+        getStt() {
+            return this.stt;
+        }
+        getHoVaTen() {
+            return this.hoVaTen;
+        }
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+        getDiaChi() {
+            return this.diaChi;
+        }
+        getluong() {
+            return this.luong;
+        }
+        getChucVu() {
+            return this.chucVu;
+        }
+    }
+
+    let congNhan1 = new CongNhan(1, 'Truong Tan B', '11-11-1997', 'Quang Nam', 2000, 'Abc');
+    let congNhan2 = new CongNhan(2, 'Truong Tan A', '11-11-1998', 'Da Nang', 2000, 'Abc');
+    let congNhan3 = new CongNhan(3, 'Truong Tan C', '11-11-1999', 'Hue', 2000, 'Abc');
+
+    let arr = [];
+    let temp = '';
+    arr.push(congNhan1);
+    arr.push(congNhan2);
+    arr.push(congNhan3);
+    for (let i = 0; i < arr.length; i++) {
+        temp += 'STT:' + arr[i].getStt() + ' Ho va ten:' + arr[i].getHoVaTen() + ' Ngay Sinh:' + arr[i].getNgaySinh() + ' Dia Chi:' + arr[i].getDiaChi() + ' Luong:' + arr[i].getluong() + ' Chuc Vu:' + arr[i].getChucVu() + '\n';
+    }
+    alert(temp);
+
+
+</script>
+</body>
+</html>

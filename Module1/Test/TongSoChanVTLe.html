@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let num;
+        num = parseInt(prompt('Nhap so luong phan tu trong mang:'));
+
+    let arr = new Array(num);
+    for (let i = 0; i < num; i++) {
+        arr[i] = parseInt(prompt('Nhap phan tu thu ' + i));
+    }
+    alert(arr);
+
+    function aSum(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (i % 2 !== 0 && array[i] % 2 === 0) {
+                sum = sum + array[i];
+            }
+        }
+        alert(sum);
+    }
+    aSum(arr);
+
+</script>
+</body>
+</html>

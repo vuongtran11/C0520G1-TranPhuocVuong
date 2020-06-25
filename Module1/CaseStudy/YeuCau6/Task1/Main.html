@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="Customer.js"></script>
+    <title>YC6.Task1.2</title>
+</head>
+<body>
+<script>
+    let regexEmail=/\S+@\S+\.\S+/;
+    let regexBirthday=/^\d{2}[./-]\d{2}[./-]\d{4}$/;
+    let regexCMND=/^\d+$/;
+     //   /^[\d]{8,8}$/; Cho nhap so khong nhap chu.
+    let listCustomer=[];
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1.Add nesw Customer"+"\n2.Display InformationCustomer"
+            +"\n3.Display total pays Customer"+"\n4.Edit Information Customer"+"\n5.Delete customer"+"\n6.Exit"));
+        switch (choose) {
+            case  1:{
+                addNewCustomer();
+                break;
+            }
+            case 3:{
+                displayTotalPays();
+            }
+            default:{
+                alert('Failed');
+            }
+        }
+    }
+    function displayTotalPays() {
+        let temp="";
+        for(let i=0; i<listCustomer.length;i++){
+            temp +=i +". Name: "+ listCustomer[i].getName()+"\n";
+        }
+        let chooseDisplay=parseInt(prompt(temp));
+        alert('Total pays cua ban la: '+listCustomer[chooseDisplay].totalPays())
+    }
+    function addNewCustomer() {
+        let checkValid=false;
+        let cus= new Customer();
+        let name=prompt("Input name: ");
+        let cmnd;
+        let birthday;
+        let email;
+        do{
+            cmnd=prompt("Input cmnd ");
+            if(regexCMND.test(cmnd)){
+                checkValid=true;
+            }else {
+                alert('Khong hop le. ')
+            }
+        }while(!checkValid);
+        checkValid=false;
+        do{
+            birthday=prompt("Input birthday: ");
+            if(regexBirthday.test(birthday)){
+                checkValid=true;
+            }else {
+                alert('Ngay sinh khong hop le. ')
+            }
+        }while (!checkValid);
+        checkValid=false;
+        do{
+            email=prompt("Input email: ");
+            if(regexEmail.test(email)){
+                checkValid=true;
+            }else {
+                alert('Email khong hop le. Vui long nhap lai.')
+            }
+        }while (!checkValid);
+        checkValid=false;
+        let address=prompt("Input address: ");
+        let typeService=prompt("Input type service: ");
+        let typeRoom=prompt("Input type room: ");
+        let typeCustomer=prompt("Input type Customer ");
+        let discount=prompt("Input discount: ");
+        let quantityIncluded=prompt("Input quantityIncluded: ");
+        let renDays=prompt("Input rendays: ");
+        cus.setName(name);
+        cus.setCMND(cmnd);
+        cus.setBirthday(birthday);
+        cus.setEmail(email);
+        cus.setAddress(address);
+        cus.setTypeService(typeService);
+        cus.setTypeRoom(typeRoom);
+        cus.setTypeCustomer(typeCustomer);
+        cus.setDiscount(discount);
+        cus.setQuantityIncluded(quantityIncluded);
+        cus.setRentDays(renDays);
+        listCustomer.push(cus);
+        alert('Ban da them thanh cong');
+        displayMainMenu();
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>

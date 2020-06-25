@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Chuot {
+        constructor(ten, canNang, tocDo, trangThai) {
+            this.ten = ten;
+            this.canNang = canNang;
+            this.tocDo = tocDo;
+            this.trangThai = trangThai;
+        }
+
+        keu() {
+            console.log('Chit, chit...');
+        }
+    }
+
+    class Meo {
+        constructor(ten, canNang, tocDo) {
+            this.ten = ten;
+            this.canNang = canNang;
+            this.tocDo = tocDo;
+        }
+
+        keu() {
+            console.log('Meo, meo...');
+        }
+
+        batChuot(chuot) {
+
+            this.keu();
+
+            if (chuot.trangThai === 'song') {
+
+                chuot.keu();
+
+                if (this.tocDo > chuot.tocDo) {
+                    this.canNang += chuot.canNang;
+                    return 'Meo bat duoc chuot. So can nang hien tai cua meo la ' + this.canNang;
+                } else {
+                    return 'Meo khong bat duoc chuot. Chuot chay nhanh qua';
+                }
+            } else {
+                return 'Meo khong bat chuot. Chuot chet roi';
+            }
+        }
+    }
+
+
+    // TH1: Meo bat duoc chuot
+    let meo1 = new Meo('Tom', 10, 20);
+    let chuot1 = new Chuot('Jerry', 5, 10, 'song');
+
+    console.log(meo1.batChuot(chuot1));
+
+    // TH2: Meo khong bat duoc chuot
+    let meo2 = new Meo('Tom', 10, 20);
+    let chuot2 = new Chuot('Jerry', 5, 25, 'song');
+
+    console.log(meo2.batChuot(chuot2));
+
+    // TH3: Chuot chet roi
+    let meo3 = new Meo('Tom', 10, 20);
+    let chuot3 = new Chuot('Jerry', 5, 10, 'chet');
+
+    console.log(meo3.batChuot(chuot3));
+
+</script>
+</body>
+</html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Demo</title>
 </head>
+<h3 id="result"></h3>
 <body>
 <script>
 
@@ -27,11 +28,39 @@
      }
      document.write(get_array());*/
 
+    /*let a=[];
+    let count=0;
+    let sum=0;
+    let avg=0;
+    let dem = 0;
+    while(count<5){
+        let b=parseInt(prompt('Nhap vao mang:'));
+        a[count]=b;
+        count++;
+    }
+    document.write('dem '+a);
+    for(let i=0;i<a.length;i++){
+        if(a[i]%3==0){
+            sum+=a[i];
+            dem++;
+        }
+        avg = sum/dem;
+    }
+    document.write('\nTong cac so chia het cho 3 la: '+ sum);
+    document.write('\nTB cac so chia het cho 3 la: '+ avg);*/
 
-
+    let str = prompt('Nhap vao chuoi');
+    let char = prompt('Nhap vao ky tu can tim');
+    let arr = str.split('');
+    let arr1 = [];
+    for (let i = 0; i < str.length; i++) {
+        if (arr[i] === char) {
+            arr1.push(arr[i]);
+        }
+    }
+    alert(arr1);
 
 
 </script>
-
 </body>
 </html>
