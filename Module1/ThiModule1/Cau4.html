@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class NhanVien{
+        constructor(tenNhanVien,soNgayLam,luongCoBan) {
+            this.tenNhanVien=tenNhanVien;
+            this.soNgayLam=soNgayLam;
+            this.luongCoBan=luongCoBan;
+        }
+        setTenNhanVien(tenNhanVien){
+            this.tenNhanVien=tenNhanVien;
+        }
+        setSoNgayLam(soNgayLam){
+            this.soNgayLam=soNgayLam;
+        }
+        setLuongCoBan(luongCoBan){
+            this.luongCoBan=luongCoBan;
+        }
+        getTenNhanVien(){
+            return this.tenNhanVien;
+        }
+        getSoNgayLam(){
+            return this.soNgayLam;
+        }
+        getLuongCoBan(){
+            return this.luongCoBan;
+        }
+        tinhLuong(){
+
+        }
+    }
+
+    let NhanVien1=new NhanVien('Nguyen VAn A',20,200000);
+    let arr =[];
+    let temp='';
+    arr.push(NhanVien1);
+    for(let i=0;i<arr.length;i++){
+        temp+='Ten Nhan Vien: '+arr[i].getTenNhanVien()+' So Ngay Lam Viec: '+arr[i].getSoNgayLam()+' Muc luong co ban: '+arr[i].getLuongCoBan()
+    }
+    alert(temp);
+
+</script>
 </body>
 </html>

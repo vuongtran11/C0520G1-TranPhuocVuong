@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function removeFruit(namefruit) {
+        let fruit = ['Apple', 'Banana', 'Lemon'];
+        for (let i = 0; i < fruit.length; i++) {
+            if (namefruit === fruit[i]) {
+                for (let j = i; j < fruit.length; j++) {
+                    fruit[j] = fruit[j + 1];
+                }
+                fruit[2] = '';
+            }
+        }
+        return fruit;
+    }
+
+    let fruit = prompt("Nhap ten cua loai trai cay : ");
+    let show = removeFruit(fruit);
+    alert(show);
+
+</script>
 </body>
 </html>

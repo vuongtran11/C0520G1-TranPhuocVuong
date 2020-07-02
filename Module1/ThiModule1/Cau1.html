@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let car = prompt('Nhap vao ky tu dau xe can tim: ');
+    let array = ['Toyota', 'Mercedes', 'Hyundai', 'Daewon'];
+
+    function findCard(car) {
+        for (let i = 0; i <= array.length; i++) {
+            if (car === 'T') {
+                return array[0];
+            } else if (car === 'M') {
+                return array[1];
+            } else if (car === 'H') {
+                return array[2];
+            } else if (car === 'D') {
+                return array[3];
+            }
+        }
+    }
+    let show = findCard(car);
+    alert(show);
+
+</script>
 </body>
 </html>

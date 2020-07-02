@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    let num = prompt('Nhap vao mot so bat ky');
+    alert("So " + num + " la so nguyen to ? " + isPrime(num));
+
+    function isPrime(number) {
+        for (let i = 2; i < number; i++) {
+            if (number % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+</script>
 </body>
 </html>
