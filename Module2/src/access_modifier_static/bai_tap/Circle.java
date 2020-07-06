@@ -23,3 +23,4 @@ public class Circle {
         System.out.println(circle2.getRadius()+"_"+circle2.getArea());
     }
 }
+
