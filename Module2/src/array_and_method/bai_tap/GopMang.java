@@ -12,7 +12,7 @@ public class GopMang {
             arrTong[i] = arr2[j];
         }
         for (int i = 0; i < arrTong.length; i++) {
-            System.out.println(arrTong[i]);
+            System.out.print(arrTong[i]+"\t");
         }
     }
 }
