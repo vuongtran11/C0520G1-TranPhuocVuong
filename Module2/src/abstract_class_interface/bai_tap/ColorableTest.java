@@ -10,6 +10,8 @@ public class ColorableTest {
         for(Shape shape:ListShape){
             if(shape instanceof Square){
                 ((Square) shape).howToColor();
+            } else if (shape instanceof Rectangle){
+                ((Rectangle) shape).howToColor();
             }
         }
     }
