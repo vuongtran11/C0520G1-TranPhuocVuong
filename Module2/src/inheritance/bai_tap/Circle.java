@@ -27,6 +27,14 @@ public class Circle {
     public String toString(){
         return "Radius: "+this.radius+"Color: "+this.color;
     }
+
+    public void print() {
+        System.out.println("print 1");
+    }
+
+    public void print(String a) {
+        System.out.println("print 2" + a);
+    }
 }
 
 

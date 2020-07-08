@@ -14,6 +14,7 @@ public class Cylinder extends Circle{
         this.height = height;
     }
 
+    @Override
     public String toString(){
         return "Radius: "+this.getRadius()+"; Color: "+this.getColor()+"; Height:"+this.getHeight();
     }
@@ -25,7 +26,7 @@ public class Cylinder extends Circle{
         System.out.println("In dien tich :"+ getArea());
     }
     public static void main(String[] args) {
-        Circle cylinder=new Cylinder(5,"red",7);
+        Circle cylinder = new Cylinder(5,"red",7);
         Cylinder cylinder1= (Cylinder) cylinder;
         cylinder1.Screen();
     }

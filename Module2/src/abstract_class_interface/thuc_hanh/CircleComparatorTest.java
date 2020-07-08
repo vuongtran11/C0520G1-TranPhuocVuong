@@ -23,5 +23,4 @@ public class CircleComparatorTest {
             System.out.println(circle);
         }
     }
-
 }
