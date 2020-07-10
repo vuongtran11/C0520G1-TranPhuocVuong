@@ -36,20 +36,32 @@ public class MyArrayListTest {
         Student c=new Student(3,"Lan");
         Student d=new Student(4,"Mai");
         Student e=new Student(5,"My");
-        Student f=new Student(6,"My");
+        Student f=new Student(6,"My2");
         MyArrayList<Student>studentMyArrayList=new MyArrayList<>();
+        MyArrayList<Student>newMyArrayList=new MyArrayList<>();
+
         studentMyArrayList.add(a);
         studentMyArrayList.add(b);
         studentMyArrayList.add(c);
         studentMyArrayList.add(d);
         studentMyArrayList.add(e);
-        studentMyArrayList.add(f,2);
+        //studentMyArrayList.add(f,2);
         // studentMyArrayList.clear();
         /*for(int i=0;i<studentMyArrayList.size();i++){
             Student student=(Student) studentMyArrayList.elements[i];
             System.out.println(student.getId());
             System.out.println(student.getName());
         }*/
-        System.out.println(studentMyArrayList.size());
+     /*   System.out.println(studentMyArrayList.size());
+        System.out.println(studentMyArrayList.get(2).getName());
+        System.out.println(studentMyArrayList.contains(f));*/
+
+        newMyArrayList=studentMyArrayList.clone();
+        /*newMyArrayList.remove(1);
+        for (int i=0;i<newMyArrayList.size();i++){
+            System.out.println(newMyArrayList.get(i).getName());
+        }*/
+        Student student=newMyArrayList.remove(1);
+        System.out.println(student.getName());
     }
 }
