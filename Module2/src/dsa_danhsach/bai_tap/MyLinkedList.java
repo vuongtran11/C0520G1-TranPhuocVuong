@@ -70,15 +70,14 @@ public class MyLinkedList<E> {
         if (index == 0) {
             data = temp.data;
             head = head.next;
-            numNodes--;
         } else {
             for (int i = 0; i < index - 1 && temp.next != null; i++) {
                 temp = temp.next;
             }
             data = temp.next.data;
             temp.next = temp.next.next;
-            numNodes--;
         }
+        numNodes--;
         return (E) data;
     }
 

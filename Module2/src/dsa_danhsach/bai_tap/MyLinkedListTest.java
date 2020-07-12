@@ -38,10 +38,10 @@ public class MyLinkedListTest {
 
         myLinkedList.addFirst(student1);
         myLinkedList.addFirst(student2);
-        myLinkedList.addLast(student3);
-        myLinkedList.addLast(student4);
+        //myLinkedList.addLast(student3);
+        myLinkedList.add(2,student4);
 
-        myLinkedList.remove(3);
+       // myLinkedList.remove(2);
 
         //MyLinkedList<Student> cloneLinkedList=myLinkedList.clone();
 
