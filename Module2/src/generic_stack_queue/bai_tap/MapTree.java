@@ -7,7 +7,7 @@ public class MapTree {
         TreeMap<String,Integer> map1=new TreeMap<>();
 
         TreeMap<String,Integer> map=new TreeMap<>();
-        String str = "hey long long hey phuc viet tuan";
+        String str = "hey long long hey phuc viet tuan long";
         String [] words = str.split(" ");
 
         int index=0;

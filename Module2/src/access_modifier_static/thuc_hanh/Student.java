@@ -20,4 +20,12 @@ public class Student {
     void display() {
         System.out.println(rollno + " " + name + " " + college);
     }
+
+    public String getDob() {
+        return null;
+    }
+
+    public int getAge() {
+        return 0;
+    }
 }

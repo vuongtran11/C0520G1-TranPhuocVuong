@@ -47,9 +47,9 @@ public class Demerging {
         Student student1 = new Student("huy", "1990", "nam");
         Student student2 = new Student("hung", "1990", "nam");
         Student student3 = new Student("viet", "1990", "nam");
-        Student student4 = new Student("ha", "1990", "nữ");
-        Student student5 = new Student("thuy", "1990", "nữ");
-        Student student6 = new Student("phuong", "1990", "nữ");
+        Student student4 = new Student("ha", "1991", "nữ");
+        Student student5 = new Student("thuy", "1992", "nữ");
+        Student student6 = new Student("phuong", "1993", "nữ");
         student[0]=student1;
         student[1]=student2;
         student[2]=student3;
